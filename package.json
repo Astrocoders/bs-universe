@@ -1,0 +1,10 @@
+{
+  "name": "bs-universe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gabriel R. Abreu <grsabreu@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.6.0"
+  }
+}

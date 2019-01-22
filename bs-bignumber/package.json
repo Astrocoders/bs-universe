@@ -1,0 +1,25 @@
+{
+  "name": "bs-bignumber",
+  "version": "1.0.0",
+  "description": "Boilerplate for BuckleScript NPM package",
+  "main": "lib/js/re/Foo.js",
+  "repository": "git@github.com:Astrocoders/bs-bignumber.git",
+  "author": "Gabriel R. Abreu <grsabreu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bignumber.js": "^8.0.2"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.0",
+    "bs-platform": "^4.0.14",
+    "jest": "^22.1.4"
+  },
+  "scripts": {
+    "start": "yarn bs:watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "bs:build": "bsb -make-world -clean-world",
+    "bs:watch": "bsb -make-world -clean-world -w",
+    "bs:setup": "bsb -make-world"
+  }
+}

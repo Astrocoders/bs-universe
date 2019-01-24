@@ -60,3 +60,4 @@ typings/
 lib/
 .bsb.lock
 *.bs.js
+**/*.bs.js

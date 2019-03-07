@@ -4,7 +4,15 @@
   "main": "index.js",
   "author": "Gabriel R. Abreu <grsabreu@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "generate-data": "node generateData.js",
+    "add-data": "git add universe.json"
+  },
   "devDependencies": {
     "lerna": "^3.6.0"
-  }
+  },
+  "dependencies": {
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": ["generate-data", "add-data"]
 }

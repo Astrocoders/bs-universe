@@ -1,12 +1,11 @@
 version: 2
 jobs:
-    universe:
+    build:
         branches:
             only:
                 - master
         docker:
-            image:
-                - circleci/node:stretch
+            - image: circleci/node:stretch
         steps:
             - run:
                 name: Cloning universe-landing repository

@@ -9,13 +9,13 @@ jobs:
         steps:
             - checkout
             - run:
+                name: Generating universe.json file
+                command: node generateData.js
+            - run:
                 name: Cloning universe-landing repository
                 command: |
                     mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
                     git clone git@github.com:Astrocoders/universe-landing.git
-            - run:
-                name: Generating universe.json file
-                command: node generateData.js
             - run:
                 name: Moving universe.json to universe-landing
                 command: mv universe.json universe-landing/universe.json

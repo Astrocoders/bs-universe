@@ -19,7 +19,7 @@ jobs:
             - run:
                 name: Moving universe.json to universe-landing
                 command: mv universe.json universe-landing/universe.json
-            -run:
+            - run:
                 name: Adding who I am to the project
                 command: git config --global user.email "jeffersonhcarvalho@gmail.com" && git config --global user.name Jefferson Carvalho”
             - run:

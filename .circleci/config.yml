@@ -7,6 +7,7 @@ jobs:
         docker:
             - image: circleci/node:stretch
         steps:
+            - checkout
             - run:
                 name: Cloning universe-landing repository
                 command: |

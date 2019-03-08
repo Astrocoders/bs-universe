@@ -18,7 +18,8 @@ jobs:
                 command: mv universe.json universe-landing/universe.json
             - run:
                 name: Adding, commiting and pushing changes to origin
-                command: >
+                command: |
+                    mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
                     cd universe-landing && git add universe.json && git commit -m "update universe.json" && git push origin master
             - run:
                 name: Deleting local copy of universe-landing

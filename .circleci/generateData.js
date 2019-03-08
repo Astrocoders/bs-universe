@@ -2,12 +2,12 @@ const fs = require('fs')
 
 console.log("Generating universe.json, please wait...")
 
-const files = fs.readdirSync('.')
+const files = fs.readdirSync('..')
 const universe = []
 
 for (let file of files) {
-  if (fs.existsSync(`${file}/package.json`)) {
-    const data = JSON.parse(fs.readFileSync(`${file}/package.json`))
+  if (fs.existsSync(`../${file}/package.json`)) {
+    const data = JSON.parse(fs.readFileSync(`../${file}/package.json`))
     universe.push({
       title: data.name,
       description: data.description,

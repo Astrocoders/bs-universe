@@ -1,0 +1,27 @@
+version: 2
+jobs:
+    universe:
+        branches:
+            only:
+                - master
+        docker:
+            image:
+                - circleci/node:stretch
+        steps:
+            - run:
+                name: Cloning universe-landing repository
+                command: git clone git@github.com:Astrocoders/universe-landing.git
+            - run:
+                name: Generating universe.json file
+                command: node generateData.js
+            - run:
+                name: Moving universe.json to universe-landing
+                command: mv universe.json universe-landing/universe.json
+            - run:
+                name: Adding, commiting and pushing changes to origin
+                command: cd universe-landing && git add universe.json && git commit -m "chore: update universe.json" && git push origin master
+            - run:
+                name: Deleting local copy of universe-landing
+                command: rm -rf universe-landing
+
+            

@@ -10,9 +10,5 @@
   },
   "devDependencies": {
     "lerna": "^3.6.0"
-  },
-  "dependencies": {
-    "pre-commit": "^1.2.2"
-  },
-  "pre-commit": ["generate-data", "add-data"]
+  }
 }

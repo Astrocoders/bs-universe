@@ -9,6 +9,6 @@
     "add-data": "git add universe.json"
   },
   "devDependencies": {
-    "lerna": "^3.6.0"
+    "lerna": "^3.16.4"
   }
 }

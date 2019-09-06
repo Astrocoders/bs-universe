@@ -6,9 +6,11 @@
   "license": "MIT",
   "scripts": {
     "generate-data": "node generateData.js",
-    "add-data": "git add universe.json"
+    "add-data": "git add universe.json",
+    "lib:new": "node newLib.js"
   },
   "devDependencies": {
-    "lerna": "^3.6.0"
+    "hygen": "^4.0.9",
+    "lerna": "^3.16.4"
   }
 }

@@ -11,19 +11,8 @@ async function execute(command) {
 }
 
 const main = async () => {
-  await execute(`npx hygen bs new ${projectName}`)
+  await execute(`npx hygen lib new ${projectName}`)
   await execute(`npx lerna create ${projectName}  --yes`)
 }
 
 main()
-
-return 0
-
-/*
-async function execute(command) {
-  exec(command, (err, stdout, stderr) => {
-    if (err) throw err
-    process.stdout.write(stdout)
-  });
-}
-*/

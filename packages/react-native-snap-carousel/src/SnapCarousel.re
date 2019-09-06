@@ -25,7 +25,9 @@ external make:
     ~onBeforeSnapToItem: int => unit=?,
     ~onSnapToItem: int => unit=?,
     ~loop: bool=?,
-    ~inactiveSlideScale: float=?
+    ~inactiveSlideScale: float=?,
+    ~inactiveSlideScale: float=?,
+    unit
   ) =>
   React.element =
   "default";

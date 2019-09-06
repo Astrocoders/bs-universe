@@ -5,7 +5,7 @@ console.log("Generating universe.json, please wait...")
 const universe = fs.readdirSync('.').map(file => {
   if(fs.existsSync(`${file}/package.json`)) {
     const { name: title, description } = JSON.parse(fs.readFileSync(`${file}/package.json`))
-    return { title, description, url: `https://github.com/Astrocoders/bs-universe/tree/master/${file}` }
+    return { title, description, url: `https://github.com/Astrocoders/bs-universe/tree/master/packages/${file}` }
   }
   return null
 }).filter(Boolean)

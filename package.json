@@ -7,8 +7,8 @@
   "scripts": {
     "generate-data": "node generateData.js",
     "add-data": "git add universe.json",
-    "lib:new": "node newLib.js",
-    "react:new": "IS_REACT=true node newLib.js"
+    "lib:new": "npx hygen lib new",
+    "react:new": "npx hygen react new"
   },
   "devDependencies": {
     "hygen": "^4.0.9",

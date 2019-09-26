@@ -25,7 +25,7 @@ jobs:
             - run:
                 name: Adding, commiting and pushing changes to origin
                 command:
-                    cd universe-landing/data && git add universe.json && git commit -m "update universe.json" && git push origin develop
+                    cd universe-landing/data && git add universe.json && git commit -m "update universe.json" && git push origin master
             - run:
                 name: Deleting local copy of universe-landing
                 command: rm -rf universe-landing

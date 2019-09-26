@@ -1,6 +1,5 @@
-
 {
-  "name": "async-popup",
+  "name": "bs-async-popup",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
@@ -10,7 +9,7 @@
   "keywords": [
     "BuckleScript"
   ],
-  "author": "Astrocoders <contact@astrocoders.com",
+  "author": "Astrocoders <contact@astrocoders.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^5.0.6"

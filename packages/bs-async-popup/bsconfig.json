@@ -1,6 +1,6 @@
 
 {
-  "name": "async-popup",
+  "name": "bs-async-popup",
   "version": "0.1.0",
   "sources": {
     "dir" : "src",

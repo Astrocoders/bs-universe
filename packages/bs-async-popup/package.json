@@ -1,8 +1,5 @@
----
-to: packages/<%= name %>/package.json
----
 {
-  "name": "<%= name %>",
+  "name": "bs-async-popup",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",

@@ -1,7 +1,6 @@
 ---
 to: packages/<%= name %>/package.json
 ---
-
 {
   "name": "<%= name %>",
   "version": "0.1.0",
@@ -13,7 +12,7 @@ to: packages/<%= name %>/package.json
   "keywords": [
     "BuckleScript"
   ],
-  "author": "Astrocoders <contact@astrocoders.com",
+  "author": "Astrocoders <contact@astrocoders.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^5.0.6"

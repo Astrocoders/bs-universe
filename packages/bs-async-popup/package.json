@@ -1,5 +1,9 @@
 {
   "name": "bs-async-popup",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Astrocoders/bs-universe/tree/master/packages/bs-async-popup"
+  },
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
@@ -7,7 +11,9 @@
     "clean": "bsb -clean-world"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "ReasonML",
+    "Reason"
   ],
   "author": "Astrocoders <contact@astrocoders.com>",
   "license": "MIT",

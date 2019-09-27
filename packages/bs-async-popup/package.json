@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/Astrocoders/bs-universe/tree/master/packages/bs-async-popup"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",

@@ -12,6 +12,7 @@
   "suffix": ".bs.js",
   "bs-dependencies": [],
   "warnings": {
+    "number": "-30",
     "error": "+101"
   }
 }

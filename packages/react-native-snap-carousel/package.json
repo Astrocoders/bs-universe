@@ -2,6 +2,7 @@
   "name": "react-native-snap-carousel",
   "version": "0.1.0",
   "scripts": {
+    "postinstall": "patch-package",
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world"
@@ -12,13 +13,14 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "patch-package": "^6.4.7",
     "bs-platform": "^9.0.2",
     "reason-react": "^0.9.1",
-    "reason-react-native": "^0.60.0"
+    "reason-react-native": "^0.60.1"
   },
   "peerDependencies": {
     "react-native-snap-carousel": "^3.9.1",
     "reason-react": "^0.9.1",
-    "reason-react-native": "^0.60.0"
+    "reason-react-native": "^0.60.1"
   }
 }

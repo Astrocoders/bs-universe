@@ -1,0 +1,2719 @@
+diff --git a/node_modules/reason-react-native/.merlin b/node_modules/reason-react-native/.merlin
+new file mode 100644
+index 0000000..a0d0adb
+--- /dev/null
++++ b/node_modules/reason-react-native/.merlin
+@@ -0,0 +1,21 @@
++####{BSB GENERATED: NO EDIT
++B lib/bs
++FLG -open ReactNative
++FLG -ppx '/Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe -as-ppx -bs-jsx 3'
++S /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/lib/ocaml
++B /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/lib/ocaml
++FLG -warn-error @a -w @a-105
++FLG -w +a-4-9-20-40-41-42-50-61-102
++S /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml
++B /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml
++S src/private
++B lib/bs/src/private
++S src/elements
++B lib/bs/src/elements
++S src/components
++B lib/bs/src/components
++S src/types
++B lib/bs/src/types
++S src/apis
++B lib/bs/src/apis
++####BSB GENERATED: NO EDIT}
+diff --git a/node_modules/reason-react-native/bsconfig.json b/node_modules/reason-react-native/bsconfig.json
+index c15352f..503aba7 100644
+--- a/node_modules/reason-react-native/bsconfig.json
++++ b/node_modules/reason-react-native/bsconfig.json
+@@ -1,7 +1,6 @@
+ {
+   "name": "reason-react-native",
+   "namespace": "react-native",
+-  "refmt": 3,
+   "reason": {
+     "react-jsx": 3
+   },
+diff --git a/node_modules/reason-react-native/lib/bs/.bsbuild b/node_modules/reason-react-native/lib/bs/.bsbuild
+new file mode 100644
+index 0000000..e5d2a4b
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/.bsbuild
+@@ -0,0 +1,114 @@
++110
++TV
++Text
++View
++Alert
++Color
++Event
++Image
++Modal
++Share
++Style
++Button
++Easing
++Global
++Picker
++Slider
++Switch
++Linking
++NetInfo
++WebView
++AlertIOS
++Animated
++AppState
++CheckBox
++FlatList
++Keyboard
++Packager
++Platform
++Settings
++Clipboard
++PickerIOS
++StatusBar
++TabBarIOS
++TextInput
++UIManager
++Vibration
++YellowBox
++CameraRoll
++Dimensions
++PixelRatio
++ScrollView
++SourceCode
++StyleSheet
++AppRegistry
++BackHandler
++FontVariant
++GeoLocation
++ImageEditor
++NativeTypes
++SectionList
++AsyncStorage
++PanResponder
++SafeAreaView
++ToastAndroid
++DatePickerIOS
++MaskedViewIOS
++NativeElement
++NativeMethods
++NativeModules
++ActionSheetIOS
++AnimationFrame
++ImagePickerIOS
++RefreshControl
++ToolbarAndroid
++WebViewElement
++WebViewMethods
++ImageBackground
++LayoutAnimation
++ProgressViewIOS
++SnapshotViewIOS
++VirtualizedList
++TextInputElement
++TextInputMethods
++TouchableOpacity
++ViewPagerAndroid
++AccessibilityInfo
++ActivityIndicator
++DatePickerAndroid
++EventSubscription
++Modal_Orientation
++ScrollViewElement
++ScrollViewMethods
++TimePickerAndroid
++AccessibilityState
++AccessibilityTrait
++InputAccessoryView
++InteractionManager
++PermissionsAndroid
++ProgressBarAndroid
++TouchableHighlight
++DrawerLayoutAndroid
++PushNotificationIOS
++SegmentedControlIOS
++KeyboardAvoidingView
++ActivityIndicator_Size
++VirtualizedListElement
++VirtualizedListMethods
++VirtualizedSectionList
++AndroidInteractionState
++Modal_OrientationChange
++TouchableNativeFeedback
++TouchableOpacityElement
++TouchableOpacityMethods
++ViewPagerAndroidElement
++ViewPagerAndroidMethods
++TouchableWithoutFeedback
++WebView_DecelerationRate
++WebView_DataDetectorTypes
++DrawerLayoutAndroidElement
++DrawerLayoutAndroidMethods
++TextInput_DataDetectorTypes
++src/types	src/components	src/apis	src/private	src/elements	
++1																
++0
+diff --git a/node_modules/reason-react-native/lib/bs/.bsdeps b/node_modules/reason-react-native/lib/bs/.bsdeps
+new file mode 100644
+index 0000000..897bf4c
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/.bsdeps
+@@ -0,0 +1,10 @@
++9.0.2
++/Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native
++1
++bsconfig.json	0x1.dc09d84p+28
++src	0x1.83cc1eddffc74p+30
++src/private	0x1.83cc1eddffdabp+30
++src/elements	0x1.83cc1ede02f5ep+30
++src/components	0x1.83cc1ede02c9cp+30
++src/types	0x1.83cc1ede05232p+30
++src/apis	0x1.83cc1ede03ff6p+30
+diff --git a/node_modules/reason-react-native/lib/bs/.compiler.log b/node_modules/reason-react-native/lib/bs/.compiler.log
+new file mode 100644
+index 0000000..6e90c9e
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/.compiler.log
+@@ -0,0 +1,1226 @@
++#Start(1626541040589)
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Picker.re:30:25-42:25
++  
++  28 ┆ ~accessibilityLabel: string=?,
++  29 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  30 ┆ ~accessibilityRole: [@bs.string] [
++  31 ┆                       | `none
++   . ┆ ...
++  41 ┆                       | `imagebutton
++  42 ┆                     ]
++  43 ┆                       =?,
++  44 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Picker.re:29:31-76
++  
++  27 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  28 ┆ ~accessibilityLabel: string=?,
++  29 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  30 ┆ ~accessibilityRole: [@bs.string] [
++  31 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Picker.re:18:34-23:34
++  
++  16 ┆ ~itemStyle: Style.t=?,
++  17 ┆ // View Props
++  18 ┆ ~accessibilityComponentType: [@bs.string] [
++  19 ┆                                | `none
++   . ┆ ...
++  22 ┆                                | `radiobutton_unchecked
++  23 ┆                              ]
++  24 ┆                                =?,
++  25 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Picker.re:13:12-48
++  
++  11 ┆ ~enabled: bool=?,
++  12 ┆ // Android only
++  13 ┆ ~mode: [@bs.string] [ | `dialog | `dropdown]=?,
++  14 ┆ ~prompt: string=?,
++  15 ┆ // iOS only
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Text.re:22:25-76
++  
++  20 ┆ ~testID: string=?,
++  21 ┆ ~selectionColor: string=?,
++  22 ┆ ~textBreakStrategy: [@bs.string] [ | `simple | `highQuality | `balance
++       d]=?,
++  23 ┆ ~adjustsFontSizeToFit: bool=?,
++  24 ┆ ~minimumFontScale: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Text.re:12:21-69
++  
++  10 ┆ ~accessibilityLabel: string=?,
++  11 ┆ ~allowFontScaling: bool=?,
++  12 ┆ ~ellipsizeMode: [@bs.string] [ | `clip | `head | `middle | `tail]=?,
++  13 ┆ ~numberOfLines: int=?,
++  14 ┆ ~onLayout: Event.layoutEvent => unit=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/View.re:27:25-39:25
++  
++  25 ┆ ~accessibilityLabel: string=?,
++  26 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  27 ┆ ~accessibilityRole: [@bs.string] [
++  28 ┆                       | `none
++   . ┆ ...
++  38 ┆                       | `imagebutton
++  39 ┆                     ]
++  40 ┆                       =?,
++  41 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/View.re:26:31-76
++  
++  24 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  25 ┆ ~accessibilityLabel: string=?,
++  26 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  27 ┆ ~accessibilityRole: [@bs.string] [
++  28 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/View.re:15:34-20:34
++  
++  13 ┆ ~ref: ref=?,
++  14 ┆ // View props
++  15 ┆ ~accessibilityComponentType: [@bs.string] [
++  16 ┆                                | `none
++   . ┆ ...
++  19 ┆                                | `radiobutton_unchecked
++  20 ┆                              ]
++  21 ┆                                =?,
++  22 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Image.re:90:18-96:18
++  
++  88 ┆ ~progressiveRenderingEnabled: bool=?,
++  89 ┆ ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
++  90 ┆ ~resizeMode: [@bs.string] [
++  91 ┆                | `center
++   . ┆ ...
++  95 ┆                | `stretch
++  96 ┆              ]
++  97 ┆                =?,
++  98 ┆ ~source: Source.t,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Image.re:89:20-61
++  
++  87 ┆ ~onProgress: progressEvent => unit=?,
++  88 ┆ ~progressiveRenderingEnabled: bool=?,
++  89 ┆ ~resizeMethod: [@bs.string] [ | `auto | `resize | `scale]=?,
++  90 ┆ ~resizeMode: [@bs.string] [
++  91 ┆                | `center
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Modal.re:22:25-27:25
++  
++  20 ┆ ~onRequestClose: unit => unit=?,
++  21 ┆ ~onShow: unit => unit=?,
++  22 ┆ ~presentationStyle: [@bs.string] [
++  23 ┆                       | `fullScreen
++   . ┆ ...
++  26 ┆                       | `overFullScreen
++  27 ┆                     ]
++  28 ┆                       =?,
++  29 ┆ ~supportedOrientations: array(Orientation.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Modal.re:11:21-60
++  
++   9 ┆ ~ref: ref=?,
++  10 ┆ // Modal props
++  11 ┆ ~animationType: [@bs.string] [ | `none | `slide | `fade]=?,
++  12 ┆ ~hardwareAccelerated: bool=?,
++  13 ┆ ~onDismiss: unit => unit=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Slider.re:35:25-47:25
++  
++  33 ┆ ~accessibilityLabel: string=?,
++  34 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  35 ┆ ~accessibilityRole: [@bs.string] [
++  36 ┆                       | `none
++   . ┆ ...
++  46 ┆                       | `imagebutton
++  47 ┆                     ]
++  48 ┆                       =?,
++  49 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Slider.re:34:31-76
++  
++  32 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  33 ┆ ~accessibilityLabel: string=?,
++  34 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  35 ┆ ~accessibilityRole: [@bs.string] [
++  36 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Slider.re:23:34-28:34
++  
++  21 ┆ ~value: float=?,
++  22 ┆ // View props
++  23 ┆ ~accessibilityComponentType: [@bs.string] [
++  24 ┆                                | `none
++   . ┆ ...
++  27 ┆                                | `radiobutton_unchecked
++  28 ┆                              ]
++  29 ┆                                =?,
++  30 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/CheckBox.re:32:25-44:25
++  
++  30 ┆ ~accessibilityLabel: string=?,
++  31 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  32 ┆ ~accessibilityRole: [@bs.string] [
++  33 ┆                       | `none
++   . ┆ ...
++  43 ┆                       | `imagebutton
++  44 ┆                     ]
++  45 ┆                       =?,
++  46 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/CheckBox.re:31:31-76
++  
++  29 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  30 ┆ ~accessibilityLabel: string=?,
++  31 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  32 ┆ ~accessibilityRole: [@bs.string] [
++  33 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/CheckBox.re:20:34-25:34
++  
++  18 ┆ ~value: bool=?,
++  19 ┆ // View props
++  20 ┆ ~accessibilityComponentType: [@bs.string] [
++  21 ┆                                | `none
++   . ┆ ...
++  24 ┆                                | `radiobutton_unchecked
++  25 ┆                              ]
++  26 ┆                                =?,
++  27 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/WebView.re:133:25-145:25
++  
++  131 ┆ ~accessibilityLabel: string=?,
++  132 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  133 ┆ ~accessibilityRole: [@bs.string] [
++  134 ┆                       | `none
++    . ┆ ...
++  144 ┆                       | `imagebutton
++  145 ┆                     ]
++  146 ┆                       =?,
++  147 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/WebView.re:132:31-76
++  
++  130 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  131 ┆ ~accessibilityLabel: string=?,
++  132 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  133 ┆ ~accessibilityRole: [@bs.string] [
++  134 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/WebView.re:121:34-126:34
++  
++  119 ┆ ~useWebKit: bool=?,
++  120 ┆ // View props
++  121 ┆ ~accessibilityComponentType: [@bs.string] [
++  122 ┆                                | `none
++    . ┆ ...
++  125 ┆                                | `radiobutton_unchecked
++  126 ┆                              ]
++  127 ┆                                =?,
++  128 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/WebView.re:102:24-74
++  
++  100 ┆ ~javaScriptEnabled: bool=?,
++  101 ┆ ~mediaPlaybackRequiresUserAction: bool=?,
++  102 ┆ ~mixedContentMode: [@bs.string] [ | `never | `always | `compatibility
++        ]=?,
++  103 ┆ ~onError: webViewErrorEvent => unit=?,
++  104 ┆ ~onLoad: webViewNavigationEvent => unit=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Switch.re:34:25-46:25
++  
++  32 ┆ ~accessibilityLabel: string=?,
++  33 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  34 ┆ ~accessibilityRole: [@bs.string] [
++  35 ┆                       | `none
++   . ┆ ...
++  45 ┆                       | `imagebutton
++  46 ┆                     ]
++  47 ┆                       =?,
++  48 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Switch.re:33:31-76
++  
++  31 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  32 ┆ ~accessibilityLabel: string=?,
++  33 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  34 ┆ ~accessibilityRole: [@bs.string] [
++  35 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/Switch.re:22:34-27:34
++  
++  20 ┆ ~value: bool=?,
++  21 ┆ // View props
++  22 ┆ ~accessibilityComponentType: [@bs.string] [
++  23 ┆                                | `none
++   . ┆ ...
++  26 ┆                                | `radiobutton_unchecked
++  27 ┆                              ]
++  28 ┆                                =?,
++  29 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:133:25-145:25
++  
++  131 ┆ ~accessibilityLabel: string=?,
++  132 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  133 ┆ ~accessibilityRole: [@bs.string] [
++  134 ┆                       | `none
++    . ┆ ...
++  144 ┆                       | `imagebutton
++  145 ┆                     ]
++  146 ┆                       =?,
++  147 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:132:31-76
++  
++  130 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  131 ┆ ~accessibilityLabel: string=?,
++  132 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  133 ┆ ~accessibilityRole: [@bs.string] [
++  134 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:121:34-126:34
++  
++  119 ┆ ~zoomScale: float=?,
++  120 ┆ // View props
++  121 ┆ ~accessibilityComponentType: [@bs.string] [
++  122 ┆                                | `none
++    . ┆ ...
++  125 ┆                                | `radiobutton_unchecked
++  126 ┆                              ]
++  127 ┆                                =?,
++  128 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:113:23-64
++  
++  111 ┆ ~showsHorizontalScrollIndicator: bool=?,
++  112 ┆ ~showsVerticalScrollIndicator: bool=?,
++  113 ┆ ~snapToAlignment: [@bs.string] [ | `start | `center | `end_]=?,
++  114 ┆ ~snapToEnd: bool=?,
++  115 ┆ ~snapToInterval: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:101:22-63
++  
++   99 ┆ ~onScrollBeginDrag: Event.scrollEvent => unit=?,
++  100 ┆ ~onScrollEndDrag: Event.scrollEvent => unit=?,
++  101 ┆ ~overScrollMode: [@bs.string] [ | `always | `never | `auto]=?,
++  102 ┆ ~pagingEnabled: bool=?,
++  103 ┆ ~pinchGestureEnabled: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:91:33-77
++  
++  89 ┆                       ]
++  90 ┆                         =?,
++  91 ┆ ~keyboardShouldPersistTaps: [@bs.string] [ | `always | `never | `handl
++       ed]=?,
++  92 ┆ ~maximumZoomScale: float=?,
++  93 ┆ ~minimumZoomScale: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:84:22-65
++  
++  82 ┆ ~endFillColor: Color.t=?,
++  83 ┆ ~horizontal: bool=?,
++  84 ┆ ~indicatorStyle: [@bs.string] [ | `default | `black | `white]=?,
++  85 ┆ ~keyboardDismissMode: [@bs.string] [
++  86 ┆                         | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:80:24-56
++  
++  78 ┆                                    =?,
++  79 ┆ ~contentOffset: ScrollView.contentOffset=?,
++  80 ┆ ~decelerationRate: [@bs.string] [ | `fast | `normal]=?,
++  81 ┆ ~directionalLockEnabled: bool=?,
++  82 ┆ ~endFillColor: Color.t=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/FlatList.re:72:38-77:38
++  
++  70 ┆ ~contentContainerStyle: Style.t=?,
++  71 ┆ ~contentInset: View.edgeInsets=?,
++  72 ┆ ~contentInsetAdjustmentBehavior: [@bs.string] [
++  73 ┆                                    | `automatic
++   . ┆ ...
++  76 ┆                                    | `always
++  77 ┆                                  ]
++  78 ┆                                    =?,
++  79 ┆ ~contentOffset: ScrollView.contentOffset=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/PickerIOS.re:24:25-36:25
++  
++  22 ┆ ~accessibilityLabel: string=?,
++  23 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  24 ┆ ~accessibilityRole: [@bs.string] [
++  25 ┆                       | `none
++   . ┆ ...
++  35 ┆                       | `imagebutton
++  36 ┆                     ]
++  37 ┆                       =?,
++  38 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/PickerIOS.re:23:31-76
++  
++  21 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  22 ┆ ~accessibilityLabel: string=?,
++  23 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  24 ┆ ~accessibilityRole: [@bs.string] [
++  25 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/PickerIOS.re:12:34-17:34
++  
++  10 ┆ ~itemStyle: Style.t=?,
++  11 ┆ // View Props
++  12 ┆ ~accessibilityComponentType: [@bs.string] [
++  13 ┆                                | `none
++   . ┆ ...
++  16 ┆                                | `radiobutton_unchecked
++  17 ┆                              ]
++  18 ┆                                =?,
++  19 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/StatusBar.re:21:28-67
++  
++  19 │ 
++  20 │ [@bs.module "react-native"] [@bs.scope "StatusBar"]
++  21 │ external setHidden: (bool, [@bs.string] [ | `none | `fade | `slide]) =
++       > unit =
++  22 │   "";
++  23 │ 
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/StatusBar.re:15:26-65
++  
++  13 ┆   ~translucent: bool=?,
++  14 ┆   ~networkActivityIndicatorVisible: bool=?,
++  15 ┆   ~showHideTransition: [@bs.string] [ | `fade | `none | `slide]=?
++  16 ┆ ) =>
++  17 ┆ React.element =
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:138:27-150:27
++  
++  136 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]
++  137 ┆                             =?,
++  138 ┆ ~accessibilityRole: [@bs.string] [
++  139 ┆                       | `none
++    . ┆ ...
++  149 ┆                       | `imagebutton
++  150 ┆                     ]
++  151 ┆                       =?,
++  152 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:136:33-78
++  
++  134 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  135 ┆ ~accessibilityLabel: string=?,
++  136 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]
++  137 ┆                             =?,
++  138 ┆ ~accessibilityRole: [@bs.string] [
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:125:36-130:36
++  
++  123 ┆ ~isTVSelectable: bool=?,
++  124 ┆ // View props
++  125 ┆ ~accessibilityComponentType: [@bs.string] [
++  126 ┆                                | `none
++    . ┆ ...
++  129 ┆                                | `radiobutton_unchecked
++  130 ┆                              ]
++  131 ┆                                =?,
++  132 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:107:20-120:20
++  
++  105 ┆ ~badgeColor: string=?,
++  106 ┆ ~selectedIcon: Image.Source.t=?,
++  107 ┆ ~systemIcon: [@bs.string] [
++  108 ┆                | `bookmarks
++    . ┆ ...
++  119 ┆                | `topRated
++  120 ┆              ]
++  121 ┆                =?,
++  122 ┆ ~title: string=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:28:25-40:25
++  
++  26 ┆ ~accessibilityLabel: string=?,
++  27 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  28 ┆ ~accessibilityRole: [@bs.string] [
++  29 ┆                       | `none
++   . ┆ ...
++  39 ┆                       | `imagebutton
++  40 ┆                     ]
++  41 ┆                       =?,
++  42 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:27:31-76
++  
++  25 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  26 ┆ ~accessibilityLabel: string=?,
++  27 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  28 ┆ ~accessibilityRole: [@bs.string] [
++  29 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:16:34-21:34
++  
++  14 ┆ ~unselectedTintColor: Color.t=?,
++  15 ┆ // View props
++  16 ┆ ~accessibilityComponentType: [@bs.string] [
++  17 ┆                                | `none
++   . ┆ ...
++  20 ┆                                | `radiobutton_unchecked
++  21 ┆                              ]
++  22 ┆                                =?,
++  23 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:10:23-63
++  
++   8 ┆ ~barStyle: [@bs.string] [ | `default | `black]=?,
++   9 ┆ ~barTintColor: Color.t=?,
++  10 ┆ ~itemPositioning: [@bs.string] [ | `fill | `center | `auto]=?,
++  11 ┆ ~tintColor: Color.t=?,
++  12 ┆ ~translucent: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TabBarIOS.re:8:16-50
++  
++   6 ┆ ~ref: ref=?,
++   7 ┆ // TabBarIOS props
++   8 ┆ ~barStyle: [@bs.string] [ | `default | `black]=?,
++   9 ┆ ~barTintColor: Color.t=?,
++  10 ┆ ~itemPositioning: [@bs.string] [ | `fill | `center | `auto]=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:242:25-254:25
++  
++  240 ┆ ~accessibilityLabel: string=?,
++  241 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  242 ┆ ~accessibilityRole: [@bs.string] [
++  243 ┆                       | `none
++    . ┆ ...
++  253 ┆                       | `imagebutton
++  254 ┆                     ]
++  255 ┆                       =?,
++  256 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:241:31-76
++  
++  239 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  240 ┆ ~accessibilityLabel: string=?,
++  241 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  242 ┆ ~accessibilityRole: [@bs.string] [
++  243 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:230:34-235:34
++  
++  228 ┆ ~value: string=?,
++  229 ┆ // View props
++  230 ┆ ~accessibilityComponentType: [@bs.string] [
++  231 ┆                                | `none
++    . ┆ ...
++  234 ┆                                | `radiobutton_unchecked
++  235 ┆                              ]
++  236 ┆                                =?,
++  237 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:196:23-225:23
++  
++  194 ┆ ~spellCheck: bool=?,
++  195 ┆ ~textBreakStrategy: [@bs.string] [ | `balanced | `highQuality | `simp
++        le]=?,
++  196 ┆ ~textContentType: [@bs.string] [
++  197 ┆                     | `none
++    . ┆ ...
++  224 ┆                     | `oneTimeCode
++  225 ┆                   ]
++  226 ┆                     =?,
++  227 ┆ ~underlineColorAndroid: Color.t=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:195:25-76
++  
++  193 ┆ ~selectTextOnFocus: bool=?,
++  194 ┆ ~spellCheck: bool=?,
++  195 ┆ ~textBreakStrategy: [@bs.string] [ | `balanced | `highQuality | `simp
++        le]=?,
++  196 ┆ ~textContentType: [@bs.string] [
++  197 ┆                     | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:135:26-68
++  
++  133 ┆ ~inlineImagePadding: float=?,
++  134 ┆ ~inputAccessoryViewID: string=?,
++  135 ┆ ~keyboardAppearance: [@bs.string] [ | `default | `light | `dark]=?,
++  136 ┆ ~keyboardType: [@bs.string] [
++  137 ┆                  | `default
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:124:28-130:28
++  
++  122 ┆ ~editable: bool=?,
++  123 ┆ ~enablesReturnKeyAutomatically: bool=?,
++  124 ┆ ~importantForAutofill: [@bs.string] [
++  125 ┆                          | `auto
++    . ┆ ...
++  129 ┆                          | `yesExcludeDescendants
++  130 ┆                        ]
++  131 ┆                          =?,
++  132 ┆ ~inlineImageLeft: string=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/TextInput.re:83:22-88:22
++  
++  81 ┆ // TextInput props
++  82 ┆ ~allowFontScaling: bool=?,
++  83 ┆ ~autoCapitalize: [@bs.string] [
++  84 ┆                    | `characters
++   . ┆ ...
++  87 ┆                    | `none
++  88 ┆                  ]
++  89 ┆                    =?,
++  90 ┆ ~autoComplete: [@bs.string] [
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SafeAreaView.re:20:25-32:25
++  
++  18 ┆ ~accessibilityLabel: string=?,
++  19 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  20 ┆ ~accessibilityRole: [@bs.string] [
++  21 ┆                       | `none
++   . ┆ ...
++  31 ┆                       | `imagebutton
++  32 ┆                     ]
++  33 ┆                       =?,
++  34 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SafeAreaView.re:19:31-76
++  
++  17 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  18 ┆ ~accessibilityLabel: string=?,
++  19 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  20 ┆ ~accessibilityRole: [@bs.string] [
++  21 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SafeAreaView.re:8:34-13:34
++  
++   6 ┆ ~ref: ref=?,
++   7 ┆ // SafeAreaView props
++   8 ┆ ~accessibilityComponentType: [@bs.string] [
++   9 ┆                                | `none
++   . ┆ ...
++  12 ┆                                | `radiobutton_unchecked
++  13 ┆                              ]
++  14 ┆                                =?,
++  15 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:81:25-93:25
++  
++  79 ┆ ~accessibilityLabel: string=?,
++  80 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  81 ┆ ~accessibilityRole: [@bs.string] [
++  82 ┆                       | `none
++   . ┆ ...
++  92 ┆                       | `imagebutton
++  93 ┆                     ]
++  94 ┆                       =?,
++  95 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:80:31-76
++  
++  78 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  79 ┆ ~accessibilityLabel: string=?,
++  80 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  81 ┆ ~accessibilityRole: [@bs.string] [
++  82 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:69:34-74:34
++  
++  67 ┆ ~zoomScale: float=?,
++  68 ┆ // View props
++  69 ┆ ~accessibilityComponentType: [@bs.string] [
++  70 ┆                                | `none
++   . ┆ ...
++  73 ┆                                | `radiobutton_unchecked
++  74 ┆                              ]
++  75 ┆                                =?,
++  76 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:61:23-64
++  
++  59 ┆ ~showsHorizontalScrollIndicator: bool=?,
++  60 ┆ ~showsVerticalScrollIndicator: bool=?,
++  61 ┆ ~snapToAlignment: [@bs.string] [ | `start | `center | `end_]=?,
++  62 ┆ ~snapToEnd: bool=?,
++  63 ┆ ~snapToInterval: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:49:22-63
++  
++  47 ┆ ~onScrollBeginDrag: Event.scrollEvent => unit=?,
++  48 ┆ ~onScrollEndDrag: Event.scrollEvent => unit=?,
++  49 ┆ ~overScrollMode: [@bs.string] [ | `always | `never | `auto]=?,
++  50 ┆ ~pagingEnabled: bool=?,
++  51 ┆ ~pinchGestureEnabled: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:39:33-77
++  
++  37 ┆                       ]
++  38 ┆                         =?,
++  39 ┆ ~keyboardShouldPersistTaps: [@bs.string] [ | `always | `never | `handl
++       ed]=?,
++  40 ┆ ~maximumZoomScale: float=?,
++  41 ┆ ~minimumZoomScale: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:32:22-65
++  
++  30 ┆ ~endFillColor: Color.t=?,
++  31 ┆ ~horizontal: bool=?,
++  32 ┆ ~indicatorStyle: [@bs.string] [ | `default | `black | `white]=?,
++  33 ┆ ~keyboardDismissMode: [@bs.string] [
++  34 ┆                         | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:28:24-56
++  
++  26 ┆                                    =?,
++  27 ┆ ~contentOffset: contentOffset=?,
++  28 ┆ ~decelerationRate: [@bs.string] [ | `fast | `normal]=?,
++  29 ┆ ~directionalLockEnabled: bool=?,
++  30 ┆ ~endFillColor: Color.t=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/ScrollView.re:20:38-25:38
++  
++  18 ┆ ~contentContainerStyle: Style.t=?,
++  19 ┆ ~contentInset: View.edgeInsets=?,
++  20 ┆ ~contentInsetAdjustmentBehavior: [@bs.string] [
++  21 ┆                                    | `automatic
++   . ┆ ...
++  24 ┆                                    | `always
++  25 ┆                                  ]
++  26 ┆                                    =?,
++  27 ┆ ~contentOffset: contentOffset=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:146:25-158:25
++  
++  144 ┆ ~accessibilityLabel: string=?,
++  145 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  146 ┆ ~accessibilityRole: [@bs.string] [
++  147 ┆                       | `none
++    . ┆ ...
++  157 ┆                       | `imagebutton
++  158 ┆                     ]
++  159 ┆                       =?,
++  160 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:145:31-76
++  
++  143 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  144 ┆ ~accessibilityLabel: string=?,
++  145 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `asserti
++        ve]=?,
++  146 ┆ ~accessibilityRole: [@bs.string] [
++  147 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:134:34-139:34
++  
++  132 ┆ ~zoomScale: float=?,
++  133 ┆ // View props
++  134 ┆ ~accessibilityComponentType: [@bs.string] [
++  135 ┆                                | `none
++    . ┆ ...
++  138 ┆                                | `radiobutton_unchecked
++  139 ┆                              ]
++  140 ┆                                =?,
++  141 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:126:23-64
++  
++  124 ┆ ~showsHorizontalScrollIndicator: bool=?,
++  125 ┆ ~showsVerticalScrollIndicator: bool=?,
++  126 ┆ ~snapToAlignment: [@bs.string] [ | `start | `center | `end_]=?,
++  127 ┆ ~snapToEnd: bool=?,
++  128 ┆ ~snapToInterval: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:114:22-63
++  
++  112 ┆ ~onScrollBeginDrag: Event.scrollEvent => unit=?,
++  113 ┆ ~onScrollEndDrag: Event.scrollEvent => unit=?,
++  114 ┆ ~overScrollMode: [@bs.string] [ | `always | `never | `auto]=?,
++  115 ┆ ~pagingEnabled: bool=?,
++  116 ┆ ~pinchGestureEnabled: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:104:33-77
++  
++  102 ┆                       ]
++  103 ┆                         =?,
++  104 ┆ ~keyboardShouldPersistTaps: [@bs.string] [ | `always | `never | `hand
++        led]=?,
++  105 ┆ ~maximumZoomScale: float=?,
++  106 ┆ ~minimumZoomScale: float=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:97:22-65
++  
++  95 ┆ ~endFillColor: Color.t=?,
++  96 ┆ ~horizontal: bool=?,
++  97 ┆ ~indicatorStyle: [@bs.string] [ | `default | `black | `white]=?,
++  98 ┆ ~keyboardDismissMode: [@bs.string] [
++  99 ┆                         | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:93:24-56
++  
++  91 ┆                                    =?,
++  92 ┆ ~contentOffset: ScrollView.contentOffset=?,
++  93 ┆ ~decelerationRate: [@bs.string] [ | `fast | `normal]=?,
++  94 ┆ ~directionalLockEnabled: bool=?,
++  95 ┆ ~endFillColor: Color.t=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/SectionList.re:85:38-90:38
++  
++  83 ┆ ~contentContainerStyle: Style.t=?,
++  84 ┆ ~contentInset: View.edgeInsets=?,
++  85 ┆ ~contentInsetAdjustmentBehavior: [@bs.string] [
++  86 ┆                                    | `automatic
++   . ┆ ...
++  89 ┆                                    | `always
++  90 ┆                                  ]
++  91 ┆                                    =?,
++  92 ┆ ~contentOffset: ScrollView.contentOffset=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/DatePickerIOS.re:43:25-55:25
++  
++  41 ┆ ~accessibilityLabel: string=?,
++  42 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  43 ┆ ~accessibilityRole: [@bs.string] [
++  44 ┆                       | `none
++   . ┆ ...
++  54 ┆                       | `imagebutton
++  55 ┆                     ]
++  56 ┆                       =?,
++  57 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/DatePickerIOS.re:42:31-76
++  
++  40 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  41 ┆ ~accessibilityLabel: string=?,
++  42 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  43 ┆ ~accessibilityRole: [@bs.string] [
++  44 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/DatePickerIOS.re:31:34-36:34
++  
++  29 ┆ ~timeZoneOffsetInMinutes: int=?,
++  30 ┆ // View props
++  31 ┆ ~accessibilityComponentType: [@bs.string] [
++  32 ┆                                | `none
++   . ┆ ...
++  35 ┆                                | `radiobutton_unchecked
++  36 ┆                              ]
++  37 ┆                                =?,
++  38 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/DatePickerIOS.re:27:12-54
++  
++  25 ┆                  ]
++  26 ┆                    =?,
++  27 ┆ ~mode: [@bs.string] [ | `date | `time | `datetime]=?,
++  28 ┆ ~locale: localeId=?,
++  29 ┆ ~timeZoneOffsetInMinutes: int=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/MaskedViewIOS.re:22:25-34:25
++  
++  20 ┆ ~accessibilityLabel: string=?,
++  21 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  22 ┆ ~accessibilityRole: [@bs.string] [
++  23 ┆                       | `none
++   . ┆ ...
++  33 ┆                       | `imagebutton
++  34 ┆                     ]
++  35 ┆                       =?,
++  36 ┆ ~accessibilityStates: array(AccessibilityState.t)=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/MaskedViewIOS.re:21:31-76
++  
++  19 ┆ ~accessibilityIgnoresInvertColors: bool=?,
++  20 ┆ ~accessibilityLabel: string=?,
++  21 ┆ ~accessibilityLiveRegion: [@bs.string] [ | `none | `polite | `assertiv
++       e]=?,
++  22 ┆ ~accessibilityRole: [@bs.string] [
++  23 ┆                       | `none
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++
++  Warning number 103 (configured as error) 
++  /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react-native/src/components/MaskedViewIOS.re:10:34-15:34
++  
++   8 ┆ ~maskElement: React.element,
++   9 ┆ // View props
++  10 ┆ ~accessibilityComponentType: [@bs.string] [
++  11 ┆                                | `none
++   . ┆ ...
++  14 ┆                                | `radiobutton_unchecked
++  15 ┆                              ]
++  16 ┆                                =?,
++  17 ┆ ~accessibilityElementsHidden: bool=?,
++  
++  FFI warning: @string is redundant here, you can safely remove it
++  
++#Done(1626541040784)
+diff --git a/node_modules/reason-react-native/lib/bs/.ninja_log b/node_modules/reason-react-native/lib/bs/.ninja_log
+new file mode 100644
+index 0000000..1151da3
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/.ninja_log
+@@ -0,0 +1,37 @@
++# ninja log v6
++2	71	1626540692935714381	src/elements/NativeElement.ast	886d6abc12ef6e1b
++3	87	1626540692951047679	src/elements/TextInputElement.ast	e6ac2d7f6e4a5147
++4	89	1626540692951183929	src/elements/ScrollViewMethods.ast	3e213c6a75d5a5f4
++4	90	1626540692954731379	src/elements/VirtualizedListElement.ast	56faef3a5f399c4b
++3	94	1626540692958909661	src/elements/TextInputMethods.ast	2a9d356f74db06fd
++3	96	1626540692959536617	src/elements/WebViewMethods.ast	2f912f099a606872
++71	99	1626540692962680152	src/elements/NativeElement.d	af3cd6bbed87356a
++2	105	1626540692970311926	src/private/SourceCode.ast	5e64a7634f44ead1
++87	112	1626540692977348909	src/elements/TextInputElement.d	b995937dc7a69002
++90	113	1626540692978343490	src/elements/VirtualizedListElement.d	df3289229d890378
++89	115	1626540692979705904	src/elements/ScrollViewMethods.d	334a7c735430feae
++94	117	1626540692982789897	src/elements/TextInputMethods.d	8d51e04de2d3ed1d
++96	120	1626540692985727057	src/elements/WebViewMethods.d	39b117ae01b7c17f
++105	123	1626540692988866257	src/private/SourceCode.d	c6904bc235f36611
++2	130	1626540692995299492	src/elements/WebViewElement.ast	6d13f659ed0771ef
++2	132	1626540692996936864	src/elements/NativeMethods.ast	b546eeaf218772ac
++3	153	1626540693016442443	src/elements/ScrollViewElement.ast	89218243cf79802e
++130	157	1626540693021871472	src/elements/WebViewElement.d	74386cb8488caf7d
++132	160	1626540693022174722	src/elements/NativeMethods.d	1672c6df0cca9800
++99	169	1626540693033215737	src/elements/VirtualizedListMethods.ast	91b24f3891f56d3f
++153	179	1626540693044670502	src/elements/ScrollViewElement.d	793ddfe12bbf7a1f
++115	180	1626540693044632794	src/elements/TouchableOpacityMethods.ast	66aa5dbe82d250b8
++112	181	1626540693046096416	src/elements/TouchableOpacityElement.ast	4ca1056a11fd73e1
++117	186	1626540693050288489	src/elements/ViewPagerAndroidElement.ast	ded886ee46ab73ca
++169	196	1626540693061504297	src/elements/VirtualizedListMethods.d	4f4e4c6e58053f12
++123	198	1626540693061687546	src/elements/DrawerLayoutAndroidElement.ast	ec10d65023baf3c9
++181	216	1626540693081386875	src/elements/TouchableOpacityElement.d	cca50f9dac24a555
++180	219	1626540693083659953	src/elements/TouchableOpacityMethods.d	f0c210a24df8e483
++186	223	1626540693088201318	src/elements/ViewPagerAndroidElement.d	84fbea6bec4a1de8
++198	251	1626540693116394210	src/elements/DrawerLayoutAndroidElement.d	e566dd0c4b43a21f
++157	304	1626540693140413363	src/elements/DrawerLayoutAndroidMethods.ast	8460235a3d0ffdda
++120	326	1626540693190554413	src/elements/ViewPagerAndroidMethods.ast	1818f7f149bc340a
++304	334	1626540693199521600	src/elements/DrawerLayoutAndroidMethods.d	6649b9c7d21cb63a
++216	389	1626540693228759157	src/components/Button.ast	e7928727ff44d03b
++328	391	1626540693232528232	src/elements/ViewPagerAndroidMethods.d	8dfa0dec862a14df
++389	414	1626540693276550296	src/components/Button.d	bc826bc48fdc6125
+diff --git a/node_modules/reason-react-native/lib/bs/ReactNative.mlmap b/node_modules/reason-react-native/lib/bs/ReactNative.mlmap
+new file mode 100644
+index 0000000..6f910ef
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/ReactNative.mlmap
+@@ -0,0 +1,111 @@
++('��t�}��n����g
++SourceCode
++NativeElement
++NativeMethods
++WebViewElement
++WebViewMethods
++TextInputElement
++TextInputMethods
++ScrollViewElement
++ScrollViewMethods
++VirtualizedListElement
++VirtualizedListMethods
++TouchableOpacityElement
++TouchableOpacityMethods
++ViewPagerAndroidElement
++ViewPagerAndroidMethods
++DrawerLayoutAndroidElement
++DrawerLayoutAndroidMethods
++Text
++View
++Image
++Modal
++Button
++Picker
++Slider
++Switch
++WebView
++CheckBox
++FlatList
++PickerIOS
++StatusBar
++TabBarIOS
++TextInput
++ScrollView
++SectionList
++SafeAreaView
++DatePickerIOS
++MaskedViewIOS
++RefreshControl
++ToolbarAndroid
++ImageBackground
++ProgressViewIOS
++SnapshotViewIOS
++VirtualizedList
++TouchableOpacity
++ViewPagerAndroid
++ActivityIndicator
++InputAccessoryView
++ProgressBarAndroid
++TouchableHighlight
++DrawerLayoutAndroid
++SegmentedControlIOS
++KeyboardAvoidingView
++VirtualizedSectionList
++TouchableNativeFeedback
++TouchableWithoutFeedback
++TV
++FontVariant
++NativeTypes
++Modal_Orientation
++AccessibilityState
++AccessibilityTrait
++ActivityIndicator_Size
++AndroidInteractionState
++Modal_OrientationChange
++WebView_DecelerationRate
++WebView_DataDetectorTypes
++TextInput_DataDetectorTypes
++Alert
++Color
++Event
++Share
++Style
++Easing
++Global
++Linking
++NetInfo
++AlertIOS
++Animated
++AppState
++Keyboard
++Packager
++Platform
++Settings
++Clipboard
++UIManager
++Vibration
++YellowBox
++CameraRoll
++Dimensions
++PixelRatio
++StyleSheet
++AppRegistry
++BackHandler
++GeoLocation
++ImageEditor
++AsyncStorage
++PanResponder
++ToastAndroid
++NativeModules
++ActionSheetIOS
++AnimationFrame
++ImagePickerIOS
++LayoutAnimation
++AccessibilityInfo
++DatePickerAndroid
++EventSubscription
++TimePickerAndroid
++InteractionManager
++PermissionsAndroid
++PushNotificationIOS
+diff --git a/node_modules/reason-react-native/lib/bs/build.ninja b/node_modules/reason-react-native/lib/bs/build.ninja
+new file mode 100644
+index 0000000..e129a74
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/build.ninja
+@@ -0,0 +1,385 @@
++rescript = 1
++g_finger := /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml/install.stamp
++rule astj
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe  -w a -bs-v 9.0.2 -bs-jsx 3 -bs-no-version-header -warn-error @a -w @a-105 -absname -bs-ast -o $out $i
++o src/private/SourceCode.ast : astj ../../src/private/SourceCode.re
++rule deps
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsb_helper.exe -hash 3e2f2d95850ae143dd09ab7d11a3bcfa -bs-ns ReactNative $in
++  restat = 1
++o src/private/SourceCode.d : deps src/private/SourceCode.ast
++rule mij
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe -bs-ns ReactNative -I . -I src/apis -I src/types -I src/components -I src/elements -I src/private -I src -I /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml -bs-no-version-header -warn-error @a -w @a-105  -w a -bs-package-name reason-react-native -bs-package-output commonjs:$in_d:.bs.js -bs-v $g_finger $i
++  dyndep = 1
++  restat = 1
++o src/private/SourceCode-ReactNative.cmj src/private/SourceCode-ReactNative.cmi ../../src/private/SourceCode.bs.js : mij src/private/SourceCode.ast
++o src/elements/NativeElement.ast : astj ../../src/elements/NativeElement.re
++o src/elements/NativeElement.d : deps src/elements/NativeElement.ast
++o src/elements/NativeElement-ReactNative.cmj src/elements/NativeElement-ReactNative.cmi ../../src/elements/NativeElement.bs.js : mij src/elements/NativeElement.ast
++o src/elements/NativeMethods.ast : astj ../../src/elements/NativeMethods.re
++o src/elements/NativeMethods.d : deps src/elements/NativeMethods.ast
++o src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi ../../src/elements/NativeMethods.bs.js : mij src/elements/NativeMethods.ast
++o src/elements/WebViewElement.ast : astj ../../src/elements/WebViewElement.re
++o src/elements/WebViewElement.d : deps src/elements/WebViewElement.ast
++o src/elements/WebViewElement-ReactNative.cmj src/elements/WebViewElement-ReactNative.cmi ../../src/elements/WebViewElement.bs.js : mij src/elements/WebViewElement.ast
++o src/elements/WebViewMethods.ast : astj ../../src/elements/WebViewMethods.re
++o src/elements/WebViewMethods.d : deps src/elements/WebViewMethods.ast
++o src/elements/WebViewMethods-ReactNative.cmj src/elements/WebViewMethods-ReactNative.cmi ../../src/elements/WebViewMethods.bs.js : mij src/elements/WebViewMethods.ast
++o src/elements/TextInputElement.ast : astj ../../src/elements/TextInputElement.re
++o src/elements/TextInputElement.d : deps src/elements/TextInputElement.ast
++o src/elements/TextInputElement-ReactNative.cmj src/elements/TextInputElement-ReactNative.cmi ../../src/elements/TextInputElement.bs.js : mij src/elements/TextInputElement.ast
++o src/elements/TextInputMethods.ast : astj ../../src/elements/TextInputMethods.re
++o src/elements/TextInputMethods.d : deps src/elements/TextInputMethods.ast
++o src/elements/TextInputMethods-ReactNative.cmj src/elements/TextInputMethods-ReactNative.cmi ../../src/elements/TextInputMethods.bs.js : mij src/elements/TextInputMethods.ast
++o src/elements/ScrollViewElement.ast : astj ../../src/elements/ScrollViewElement.re
++o src/elements/ScrollViewElement.d : deps src/elements/ScrollViewElement.ast
++o src/elements/ScrollViewElement-ReactNative.cmj src/elements/ScrollViewElement-ReactNative.cmi ../../src/elements/ScrollViewElement.bs.js : mij src/elements/ScrollViewElement.ast
++o src/elements/ScrollViewMethods.ast : astj ../../src/elements/ScrollViewMethods.re
++o src/elements/ScrollViewMethods.d : deps src/elements/ScrollViewMethods.ast
++o src/elements/ScrollViewMethods-ReactNative.cmj src/elements/ScrollViewMethods-ReactNative.cmi ../../src/elements/ScrollViewMethods.bs.js : mij src/elements/ScrollViewMethods.ast
++o src/elements/VirtualizedListElement.ast : astj ../../src/elements/VirtualizedListElement.re
++o src/elements/VirtualizedListElement.d : deps src/elements/VirtualizedListElement.ast
++o src/elements/VirtualizedListElement-ReactNative.cmj src/elements/VirtualizedListElement-ReactNative.cmi ../../src/elements/VirtualizedListElement.bs.js : mij src/elements/VirtualizedListElement.ast
++o src/elements/VirtualizedListMethods.ast : astj ../../src/elements/VirtualizedListMethods.re
++o src/elements/VirtualizedListMethods.d : deps src/elements/VirtualizedListMethods.ast
++o src/elements/VirtualizedListMethods-ReactNative.cmj src/elements/VirtualizedListMethods-ReactNative.cmi ../../src/elements/VirtualizedListMethods.bs.js : mij src/elements/VirtualizedListMethods.ast
++o src/elements/TouchableOpacityElement.ast : astj ../../src/elements/TouchableOpacityElement.re
++o src/elements/TouchableOpacityElement.d : deps src/elements/TouchableOpacityElement.ast
++o src/elements/TouchableOpacityElement-ReactNative.cmj src/elements/TouchableOpacityElement-ReactNative.cmi ../../src/elements/TouchableOpacityElement.bs.js : mij src/elements/TouchableOpacityElement.ast
++o src/elements/TouchableOpacityMethods.ast : astj ../../src/elements/TouchableOpacityMethods.re
++o src/elements/TouchableOpacityMethods.d : deps src/elements/TouchableOpacityMethods.ast
++o src/elements/TouchableOpacityMethods-ReactNative.cmj src/elements/TouchableOpacityMethods-ReactNative.cmi ../../src/elements/TouchableOpacityMethods.bs.js : mij src/elements/TouchableOpacityMethods.ast
++o src/elements/ViewPagerAndroidElement.ast : astj ../../src/elements/ViewPagerAndroidElement.re
++o src/elements/ViewPagerAndroidElement.d : deps src/elements/ViewPagerAndroidElement.ast
++o src/elements/ViewPagerAndroidElement-ReactNative.cmj src/elements/ViewPagerAndroidElement-ReactNative.cmi ../../src/elements/ViewPagerAndroidElement.bs.js : mij src/elements/ViewPagerAndroidElement.ast
++o src/elements/ViewPagerAndroidMethods.ast : astj ../../src/elements/ViewPagerAndroidMethods.re
++o src/elements/ViewPagerAndroidMethods.d : deps src/elements/ViewPagerAndroidMethods.ast
++o src/elements/ViewPagerAndroidMethods-ReactNative.cmj src/elements/ViewPagerAndroidMethods-ReactNative.cmi ../../src/elements/ViewPagerAndroidMethods.bs.js : mij src/elements/ViewPagerAndroidMethods.ast
++o src/elements/DrawerLayoutAndroidElement.ast : astj ../../src/elements/DrawerLayoutAndroidElement.re
++o src/elements/DrawerLayoutAndroidElement.d : deps src/elements/DrawerLayoutAndroidElement.ast
++o src/elements/DrawerLayoutAndroidElement-ReactNative.cmj src/elements/DrawerLayoutAndroidElement-ReactNative.cmi ../../src/elements/DrawerLayoutAndroidElement.bs.js : mij src/elements/DrawerLayoutAndroidElement.ast
++o src/elements/DrawerLayoutAndroidMethods.ast : astj ../../src/elements/DrawerLayoutAndroidMethods.re
++o src/elements/DrawerLayoutAndroidMethods.d : deps src/elements/DrawerLayoutAndroidMethods.ast
++o src/elements/DrawerLayoutAndroidMethods-ReactNative.cmj src/elements/DrawerLayoutAndroidMethods-ReactNative.cmi ../../src/elements/DrawerLayoutAndroidMethods.bs.js : mij src/elements/DrawerLayoutAndroidMethods.ast
++o src/components/Text.ast : astj ../../src/components/Text.re
++o src/components/Text.d : deps src/components/Text.ast
++o src/components/Text-ReactNative.cmj src/components/Text-ReactNative.cmi ../../src/components/Text.bs.js : mij src/components/Text.ast
++o src/components/View.ast : astj ../../src/components/View.re
++o src/components/View.d : deps src/components/View.ast
++o src/components/View-ReactNative.cmj src/components/View-ReactNative.cmi ../../src/components/View.bs.js : mij src/components/View.ast
++o src/components/Image.ast : astj ../../src/components/Image.re
++o src/components/Image.d : deps src/components/Image.ast
++o src/components/Image-ReactNative.cmj src/components/Image-ReactNative.cmi ../../src/components/Image.bs.js : mij src/components/Image.ast
++o src/components/Modal.ast : astj ../../src/components/Modal.re
++o src/components/Modal.d : deps src/components/Modal.ast
++o src/components/Modal-ReactNative.cmj src/components/Modal-ReactNative.cmi ../../src/components/Modal.bs.js : mij src/components/Modal.ast
++o src/components/Button.ast : astj ../../src/components/Button.re
++o src/components/Button.d : deps src/components/Button.ast
++o src/components/Button-ReactNative.cmj src/components/Button-ReactNative.cmi ../../src/components/Button.bs.js : mij src/components/Button.ast
++o src/components/Picker.ast : astj ../../src/components/Picker.re
++o src/components/Picker.d : deps src/components/Picker.ast
++o src/components/Picker-ReactNative.cmj src/components/Picker-ReactNative.cmi ../../src/components/Picker.bs.js : mij src/components/Picker.ast
++o src/components/Slider.ast : astj ../../src/components/Slider.re
++o src/components/Slider.d : deps src/components/Slider.ast
++o src/components/Slider-ReactNative.cmj src/components/Slider-ReactNative.cmi ../../src/components/Slider.bs.js : mij src/components/Slider.ast
++o src/components/Switch.ast : astj ../../src/components/Switch.re
++o src/components/Switch.d : deps src/components/Switch.ast
++o src/components/Switch-ReactNative.cmj src/components/Switch-ReactNative.cmi ../../src/components/Switch.bs.js : mij src/components/Switch.ast
++o src/components/WebView.ast : astj ../../src/components/WebView.re
++o src/components/WebView.d : deps src/components/WebView.ast
++o src/components/WebView-ReactNative.cmj src/components/WebView-ReactNative.cmi ../../src/components/WebView.bs.js : mij src/components/WebView.ast
++o src/components/CheckBox.ast : astj ../../src/components/CheckBox.re
++o src/components/CheckBox.d : deps src/components/CheckBox.ast
++o src/components/CheckBox-ReactNative.cmj src/components/CheckBox-ReactNative.cmi ../../src/components/CheckBox.bs.js : mij src/components/CheckBox.ast
++o src/components/FlatList.ast : astj ../../src/components/FlatList.re
++o src/components/FlatList.d : deps src/components/FlatList.ast
++o src/components/FlatList-ReactNative.cmj src/components/FlatList-ReactNative.cmi ../../src/components/FlatList.bs.js : mij src/components/FlatList.ast
++o src/components/PickerIOS.ast : astj ../../src/components/PickerIOS.re
++o src/components/PickerIOS.d : deps src/components/PickerIOS.ast
++o src/components/PickerIOS-ReactNative.cmj src/components/PickerIOS-ReactNative.cmi ../../src/components/PickerIOS.bs.js : mij src/components/PickerIOS.ast
++o src/components/StatusBar.ast : astj ../../src/components/StatusBar.re
++o src/components/StatusBar.d : deps src/components/StatusBar.ast
++o src/components/StatusBar-ReactNative.cmj src/components/StatusBar-ReactNative.cmi ../../src/components/StatusBar.bs.js : mij src/components/StatusBar.ast
++o src/components/TabBarIOS.ast : astj ../../src/components/TabBarIOS.re
++o src/components/TabBarIOS.d : deps src/components/TabBarIOS.ast
++o src/components/TabBarIOS-ReactNative.cmj src/components/TabBarIOS-ReactNative.cmi ../../src/components/TabBarIOS.bs.js : mij src/components/TabBarIOS.ast
++o src/components/TextInput.ast : astj ../../src/components/TextInput.re
++o src/components/TextInput.d : deps src/components/TextInput.ast
++o src/components/TextInput-ReactNative.cmj src/components/TextInput-ReactNative.cmi ../../src/components/TextInput.bs.js : mij src/components/TextInput.ast
++o src/components/ScrollView.ast : astj ../../src/components/ScrollView.re
++o src/components/ScrollView.d : deps src/components/ScrollView.ast
++o src/components/ScrollView-ReactNative.cmj src/components/ScrollView-ReactNative.cmi ../../src/components/ScrollView.bs.js : mij src/components/ScrollView.ast
++o src/components/SectionList.ast : astj ../../src/components/SectionList.re
++o src/components/SectionList.d : deps src/components/SectionList.ast
++o src/components/SectionList-ReactNative.cmj src/components/SectionList-ReactNative.cmi ../../src/components/SectionList.bs.js : mij src/components/SectionList.ast
++o src/components/SafeAreaView.ast : astj ../../src/components/SafeAreaView.re
++o src/components/SafeAreaView.d : deps src/components/SafeAreaView.ast
++o src/components/SafeAreaView-ReactNative.cmj src/components/SafeAreaView-ReactNative.cmi ../../src/components/SafeAreaView.bs.js : mij src/components/SafeAreaView.ast
++o src/components/DatePickerIOS.ast : astj ../../src/components/DatePickerIOS.re
++o src/components/DatePickerIOS.d : deps src/components/DatePickerIOS.ast
++o src/components/DatePickerIOS-ReactNative.cmj src/components/DatePickerIOS-ReactNative.cmi ../../src/components/DatePickerIOS.bs.js : mij src/components/DatePickerIOS.ast
++o src/components/MaskedViewIOS.ast : astj ../../src/components/MaskedViewIOS.re
++o src/components/MaskedViewIOS.d : deps src/components/MaskedViewIOS.ast
++o src/components/MaskedViewIOS-ReactNative.cmj src/components/MaskedViewIOS-ReactNative.cmi ../../src/components/MaskedViewIOS.bs.js : mij src/components/MaskedViewIOS.ast
++o src/components/RefreshControl.ast : astj ../../src/components/RefreshControl.re
++o src/components/RefreshControl.d : deps src/components/RefreshControl.ast
++o src/components/RefreshControl-ReactNative.cmj src/components/RefreshControl-ReactNative.cmi ../../src/components/RefreshControl.bs.js : mij src/components/RefreshControl.ast
++o src/components/ToolbarAndroid.ast : astj ../../src/components/ToolbarAndroid.re
++o src/components/ToolbarAndroid.d : deps src/components/ToolbarAndroid.ast
++o src/components/ToolbarAndroid-ReactNative.cmj src/components/ToolbarAndroid-ReactNative.cmi ../../src/components/ToolbarAndroid.bs.js : mij src/components/ToolbarAndroid.ast
++o src/components/ImageBackground.ast : astj ../../src/components/ImageBackground.re
++o src/components/ImageBackground.d : deps src/components/ImageBackground.ast
++o src/components/ImageBackground-ReactNative.cmj src/components/ImageBackground-ReactNative.cmi ../../src/components/ImageBackground.bs.js : mij src/components/ImageBackground.ast
++o src/components/ProgressViewIOS.ast : astj ../../src/components/ProgressViewIOS.re
++o src/components/ProgressViewIOS.d : deps src/components/ProgressViewIOS.ast
++o src/components/ProgressViewIOS-ReactNative.cmj src/components/ProgressViewIOS-ReactNative.cmi ../../src/components/ProgressViewIOS.bs.js : mij src/components/ProgressViewIOS.ast
++o src/components/SnapshotViewIOS.ast : astj ../../src/components/SnapshotViewIOS.re
++o src/components/SnapshotViewIOS.d : deps src/components/SnapshotViewIOS.ast
++o src/components/SnapshotViewIOS-ReactNative.cmj src/components/SnapshotViewIOS-ReactNative.cmi ../../src/components/SnapshotViewIOS.bs.js : mij src/components/SnapshotViewIOS.ast
++o src/components/VirtualizedList.ast : astj ../../src/components/VirtualizedList.re
++o src/components/VirtualizedList.d : deps src/components/VirtualizedList.ast
++o src/components/VirtualizedList-ReactNative.cmj src/components/VirtualizedList-ReactNative.cmi ../../src/components/VirtualizedList.bs.js : mij src/components/VirtualizedList.ast
++o src/components/TouchableOpacity.ast : astj ../../src/components/TouchableOpacity.re
++o src/components/TouchableOpacity.d : deps src/components/TouchableOpacity.ast
++o src/components/TouchableOpacity-ReactNative.cmj src/components/TouchableOpacity-ReactNative.cmi ../../src/components/TouchableOpacity.bs.js : mij src/components/TouchableOpacity.ast
++o src/components/ViewPagerAndroid.ast : astj ../../src/components/ViewPagerAndroid.re
++o src/components/ViewPagerAndroid.d : deps src/components/ViewPagerAndroid.ast
++o src/components/ViewPagerAndroid-ReactNative.cmj src/components/ViewPagerAndroid-ReactNative.cmi ../../src/components/ViewPagerAndroid.bs.js : mij src/components/ViewPagerAndroid.ast
++o src/components/ActivityIndicator.ast : astj ../../src/components/ActivityIndicator.re
++o src/components/ActivityIndicator.d : deps src/components/ActivityIndicator.ast
++o src/components/ActivityIndicator-ReactNative.cmj src/components/ActivityIndicator-ReactNative.cmi ../../src/components/ActivityIndicator.bs.js : mij src/components/ActivityIndicator.ast
++o src/components/InputAccessoryView.ast : astj ../../src/components/InputAccessoryView.re
++o src/components/InputAccessoryView.d : deps src/components/InputAccessoryView.ast
++o src/components/InputAccessoryView-ReactNative.cmj src/components/InputAccessoryView-ReactNative.cmi ../../src/components/InputAccessoryView.bs.js : mij src/components/InputAccessoryView.ast
++o src/components/ProgressBarAndroid.ast : astj ../../src/components/ProgressBarAndroid.re
++o src/components/ProgressBarAndroid.d : deps src/components/ProgressBarAndroid.ast
++o src/components/ProgressBarAndroid-ReactNative.cmj src/components/ProgressBarAndroid-ReactNative.cmi ../../src/components/ProgressBarAndroid.bs.js : mij src/components/ProgressBarAndroid.ast
++o src/components/TouchableHighlight.ast : astj ../../src/components/TouchableHighlight.re
++o src/components/TouchableHighlight.d : deps src/components/TouchableHighlight.ast
++o src/components/TouchableHighlight-ReactNative.cmj src/components/TouchableHighlight-ReactNative.cmi ../../src/components/TouchableHighlight.bs.js : mij src/components/TouchableHighlight.ast
++o src/components/DrawerLayoutAndroid.ast : astj ../../src/components/DrawerLayoutAndroid.re
++o src/components/DrawerLayoutAndroid.d : deps src/components/DrawerLayoutAndroid.ast
++o src/components/DrawerLayoutAndroid-ReactNative.cmj src/components/DrawerLayoutAndroid-ReactNative.cmi ../../src/components/DrawerLayoutAndroid.bs.js : mij src/components/DrawerLayoutAndroid.ast
++o src/components/SegmentedControlIOS.ast : astj ../../src/components/SegmentedControlIOS.re
++o src/components/SegmentedControlIOS.d : deps src/components/SegmentedControlIOS.ast
++o src/components/SegmentedControlIOS-ReactNative.cmj src/components/SegmentedControlIOS-ReactNative.cmi ../../src/components/SegmentedControlIOS.bs.js : mij src/components/SegmentedControlIOS.ast
++o src/components/KeyboardAvoidingView.ast : astj ../../src/components/KeyboardAvoidingView.re
++o src/components/KeyboardAvoidingView.d : deps src/components/KeyboardAvoidingView.ast
++o src/components/KeyboardAvoidingView-ReactNative.cmj src/components/KeyboardAvoidingView-ReactNative.cmi ../../src/components/KeyboardAvoidingView.bs.js : mij src/components/KeyboardAvoidingView.ast
++o src/components/VirtualizedSectionList.ast : astj ../../src/components/VirtualizedSectionList.re
++o src/components/VirtualizedSectionList.d : deps src/components/VirtualizedSectionList.ast
++o src/components/VirtualizedSectionList-ReactNative.cmj src/components/VirtualizedSectionList-ReactNative.cmi ../../src/components/VirtualizedSectionList.bs.js : mij src/components/VirtualizedSectionList.ast
++o src/components/TouchableNativeFeedback.ast : astj ../../src/components/TouchableNativeFeedback.re
++o src/components/TouchableNativeFeedback.d : deps src/components/TouchableNativeFeedback.ast
++o src/components/TouchableNativeFeedback-ReactNative.cmj src/components/TouchableNativeFeedback-ReactNative.cmi ../../src/components/TouchableNativeFeedback.bs.js : mij src/components/TouchableNativeFeedback.ast
++o src/components/TouchableWithoutFeedback.ast : astj ../../src/components/TouchableWithoutFeedback.re
++o src/components/TouchableWithoutFeedback.d : deps src/components/TouchableWithoutFeedback.ast
++o src/components/TouchableWithoutFeedback-ReactNative.cmj src/components/TouchableWithoutFeedback-ReactNative.cmi ../../src/components/TouchableWithoutFeedback.bs.js : mij src/components/TouchableWithoutFeedback.ast
++o src/types/TV.ast : astj ../../src/types/TV.re
++o src/types/TV.d : deps src/types/TV.ast
++o src/types/TV-ReactNative.cmj src/types/TV-ReactNative.cmi ../../src/types/TV.bs.js : mij src/types/TV.ast
++o src/types/FontVariant.ast : astj ../../src/types/FontVariant.re
++o src/types/FontVariant.d : deps src/types/FontVariant.ast src/types/FontVariant.iast
++o src/types/FontVariant.iast : astj ../../src/types/FontVariant.rei
++rule mi
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe -bs-ns ReactNative -I . -I src/apis -I src/types -I src/components -I src/elements -I src/private -I src -I /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml -bs-no-version-header -warn-error @a -w @a-105  -w a -bs-v $g_finger $i
++  dyndep = 1
++  restat = 1
++o src/types/FontVariant-ReactNative.cmi : mi src/types/FontVariant.iast
++rule mj
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe -bs-ns ReactNative -bs-read-cmi -I . -I src/apis -I src/types -I src/components -I src/elements -I src/private -I src -I /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/reason-react/lib/ocaml -bs-no-version-header -warn-error @a -w @a-105  -w a -bs-package-name reason-react-native -bs-package-output commonjs:$in_d:.bs.js -bs-v $g_finger $i
++  dyndep = 1
++  restat = 1
++o src/types/FontVariant-ReactNative.cmj ../../src/types/FontVariant.bs.js : mj src/types/FontVariant.ast src/types/FontVariant-ReactNative.cmi
++o src/types/NativeTypes.ast : astj ../../src/types/NativeTypes.re
++o src/types/NativeTypes.d : deps src/types/NativeTypes.ast
++o src/types/NativeTypes-ReactNative.cmj src/types/NativeTypes-ReactNative.cmi ../../src/types/NativeTypes.bs.js : mij src/types/NativeTypes.ast
++o src/types/Modal_Orientation.ast : astj ../../src/types/Modal_Orientation.re
++o src/types/Modal_Orientation.d : deps src/types/Modal_Orientation.ast src/types/Modal_Orientation.iast
++o src/types/Modal_Orientation.iast : astj ../../src/types/Modal_Orientation.rei
++o src/types/Modal_Orientation-ReactNative.cmi : mi src/types/Modal_Orientation.iast
++o src/types/Modal_Orientation-ReactNative.cmj ../../src/types/Modal_Orientation.bs.js : mj src/types/Modal_Orientation.ast src/types/Modal_Orientation-ReactNative.cmi
++o src/types/AccessibilityState.ast : astj ../../src/types/AccessibilityState.re
++o src/types/AccessibilityState.d : deps src/types/AccessibilityState.ast src/types/AccessibilityState.iast
++o src/types/AccessibilityState.iast : astj ../../src/types/AccessibilityState.rei
++o src/types/AccessibilityState-ReactNative.cmi : mi src/types/AccessibilityState.iast
++o src/types/AccessibilityState-ReactNative.cmj ../../src/types/AccessibilityState.bs.js : mj src/types/AccessibilityState.ast src/types/AccessibilityState-ReactNative.cmi
++o src/types/AccessibilityTrait.ast : astj ../../src/types/AccessibilityTrait.re
++o src/types/AccessibilityTrait.d : deps src/types/AccessibilityTrait.ast src/types/AccessibilityTrait.iast
++o src/types/AccessibilityTrait.iast : astj ../../src/types/AccessibilityTrait.rei
++o src/types/AccessibilityTrait-ReactNative.cmi : mi src/types/AccessibilityTrait.iast
++o src/types/AccessibilityTrait-ReactNative.cmj ../../src/types/AccessibilityTrait.bs.js : mj src/types/AccessibilityTrait.ast src/types/AccessibilityTrait-ReactNative.cmi
++o src/types/ActivityIndicator_Size.ast : astj ../../src/types/ActivityIndicator_Size.re
++o src/types/ActivityIndicator_Size.d : deps src/types/ActivityIndicator_Size.ast src/types/ActivityIndicator_Size.iast
++o src/types/ActivityIndicator_Size.iast : astj ../../src/types/ActivityIndicator_Size.rei
++o src/types/ActivityIndicator_Size-ReactNative.cmi : mi src/types/ActivityIndicator_Size.iast
++o src/types/ActivityIndicator_Size-ReactNative.cmj ../../src/types/ActivityIndicator_Size.bs.js : mj src/types/ActivityIndicator_Size.ast src/types/ActivityIndicator_Size-ReactNative.cmi
++o src/types/AndroidInteractionState.ast : astj ../../src/types/AndroidInteractionState.re
++o src/types/AndroidInteractionState.d : deps src/types/AndroidInteractionState.ast src/types/AndroidInteractionState.iast
++o src/types/AndroidInteractionState.iast : astj ../../src/types/AndroidInteractionState.rei
++o src/types/AndroidInteractionState-ReactNative.cmi : mi src/types/AndroidInteractionState.iast
++o src/types/AndroidInteractionState-ReactNative.cmj ../../src/types/AndroidInteractionState.bs.js : mj src/types/AndroidInteractionState.ast src/types/AndroidInteractionState-ReactNative.cmi
++o src/types/Modal_OrientationChange.ast : astj ../../src/types/Modal_OrientationChange.re
++o src/types/Modal_OrientationChange.d : deps src/types/Modal_OrientationChange.ast src/types/Modal_OrientationChange.iast
++o src/types/Modal_OrientationChange.iast : astj ../../src/types/Modal_OrientationChange.rei
++o src/types/Modal_OrientationChange-ReactNative.cmi : mi src/types/Modal_OrientationChange.iast
++o src/types/Modal_OrientationChange-ReactNative.cmj ../../src/types/Modal_OrientationChange.bs.js : mj src/types/Modal_OrientationChange.ast src/types/Modal_OrientationChange-ReactNative.cmi
++o src/types/WebView_DecelerationRate.ast : astj ../../src/types/WebView_DecelerationRate.re
++o src/types/WebView_DecelerationRate.d : deps src/types/WebView_DecelerationRate.ast src/types/WebView_DecelerationRate.iast
++o src/types/WebView_DecelerationRate.iast : astj ../../src/types/WebView_DecelerationRate.rei
++o src/types/WebView_DecelerationRate-ReactNative.cmi : mi src/types/WebView_DecelerationRate.iast
++o src/types/WebView_DecelerationRate-ReactNative.cmj ../../src/types/WebView_DecelerationRate.bs.js : mj src/types/WebView_DecelerationRate.ast src/types/WebView_DecelerationRate-ReactNative.cmi
++o src/types/WebView_DataDetectorTypes.ast : astj ../../src/types/WebView_DataDetectorTypes.re
++o src/types/WebView_DataDetectorTypes.d : deps src/types/WebView_DataDetectorTypes.ast src/types/WebView_DataDetectorTypes.iast
++o src/types/WebView_DataDetectorTypes.iast : astj ../../src/types/WebView_DataDetectorTypes.rei
++o src/types/WebView_DataDetectorTypes-ReactNative.cmi : mi src/types/WebView_DataDetectorTypes.iast
++o src/types/WebView_DataDetectorTypes-ReactNative.cmj ../../src/types/WebView_DataDetectorTypes.bs.js : mj src/types/WebView_DataDetectorTypes.ast src/types/WebView_DataDetectorTypes-ReactNative.cmi
++o src/types/TextInput_DataDetectorTypes.ast : astj ../../src/types/TextInput_DataDetectorTypes.re
++o src/types/TextInput_DataDetectorTypes.d : deps src/types/TextInput_DataDetectorTypes.ast src/types/TextInput_DataDetectorTypes.iast
++o src/types/TextInput_DataDetectorTypes.iast : astj ../../src/types/TextInput_DataDetectorTypes.rei
++o src/types/TextInput_DataDetectorTypes-ReactNative.cmi : mi src/types/TextInput_DataDetectorTypes.iast
++o src/types/TextInput_DataDetectorTypes-ReactNative.cmj ../../src/types/TextInput_DataDetectorTypes.bs.js : mj src/types/TextInput_DataDetectorTypes.ast src/types/TextInput_DataDetectorTypes-ReactNative.cmi
++o src/apis/Alert.ast : astj ../../src/apis/Alert.re
++o src/apis/Alert.d : deps src/apis/Alert.ast
++o src/apis/Alert-ReactNative.cmj src/apis/Alert-ReactNative.cmi ../../src/apis/Alert.bs.js : mij src/apis/Alert.ast
++o src/apis/Color.ast : astj ../../src/apis/Color.re
++o src/apis/Color.d : deps src/apis/Color.ast
++o src/apis/Color-ReactNative.cmj src/apis/Color-ReactNative.cmi ../../src/apis/Color.bs.js : mij src/apis/Color.ast
++o src/apis/Event.ast : astj ../../src/apis/Event.re
++o src/apis/Event.d : deps src/apis/Event.ast
++o src/apis/Event-ReactNative.cmj src/apis/Event-ReactNative.cmi ../../src/apis/Event.bs.js : mij src/apis/Event.ast
++o src/apis/Share.ast : astj ../../src/apis/Share.re
++o src/apis/Share.d : deps src/apis/Share.ast
++o src/apis/Share-ReactNative.cmj src/apis/Share-ReactNative.cmi ../../src/apis/Share.bs.js : mij src/apis/Share.ast
++o src/apis/Style.ast : astj ../../src/apis/Style.re
++o src/apis/Style.d : deps src/apis/Style.ast src/apis/Style.iast
++o src/apis/Style.iast : astj ../../src/apis/Style.rei
++o src/apis/Style-ReactNative.cmi : mi src/apis/Style.iast
++o src/apis/Style-ReactNative.cmj ../../src/apis/Style.bs.js : mj src/apis/Style.ast src/apis/Style-ReactNative.cmi
++o src/apis/Easing.ast : astj ../../src/apis/Easing.re
++o src/apis/Easing.d : deps src/apis/Easing.ast
++o src/apis/Easing-ReactNative.cmj src/apis/Easing-ReactNative.cmi ../../src/apis/Easing.bs.js : mij src/apis/Easing.ast
++o src/apis/Global.ast : astj ../../src/apis/Global.re
++o src/apis/Global.d : deps src/apis/Global.ast
++o src/apis/Global-ReactNative.cmj src/apis/Global-ReactNative.cmi ../../src/apis/Global.bs.js : mij src/apis/Global.ast
++o src/apis/Linking.ast : astj ../../src/apis/Linking.re
++o src/apis/Linking.d : deps src/apis/Linking.ast
++o src/apis/Linking-ReactNative.cmj src/apis/Linking-ReactNative.cmi ../../src/apis/Linking.bs.js : mij src/apis/Linking.ast
++o src/apis/NetInfo.ast : astj ../../src/apis/NetInfo.re
++o src/apis/NetInfo.d : deps src/apis/NetInfo.ast src/apis/NetInfo.iast
++o src/apis/NetInfo.iast : astj ../../src/apis/NetInfo.rei
++o src/apis/NetInfo-ReactNative.cmi : mi src/apis/NetInfo.iast
++o src/apis/NetInfo-ReactNative.cmj ../../src/apis/NetInfo.bs.js : mj src/apis/NetInfo.ast src/apis/NetInfo-ReactNative.cmi
++o src/apis/AlertIOS.ast : astj ../../src/apis/AlertIOS.re
++o src/apis/AlertIOS.d : deps src/apis/AlertIOS.ast
++o src/apis/AlertIOS-ReactNative.cmj src/apis/AlertIOS-ReactNative.cmi ../../src/apis/AlertIOS.bs.js : mij src/apis/AlertIOS.ast
++o src/apis/Animated.ast : astj ../../src/apis/Animated.re
++o src/apis/Animated.d : deps src/apis/Animated.ast
++o src/apis/Animated-ReactNative.cmj src/apis/Animated-ReactNative.cmi ../../src/apis/Animated.bs.js : mij src/apis/Animated.ast
++o src/apis/AppState.ast : astj ../../src/apis/AppState.re
++o src/apis/AppState.d : deps src/apis/AppState.ast src/apis/AppState.iast
++o src/apis/AppState.iast : astj ../../src/apis/AppState.rei
++o src/apis/AppState-ReactNative.cmi : mi src/apis/AppState.iast
++o src/apis/AppState-ReactNative.cmj ../../src/apis/AppState.bs.js : mj src/apis/AppState.ast src/apis/AppState-ReactNative.cmi
++o src/apis/Keyboard.ast : astj ../../src/apis/Keyboard.re
++o src/apis/Keyboard.d : deps src/apis/Keyboard.ast src/apis/Keyboard.iast
++o src/apis/Keyboard.iast : astj ../../src/apis/Keyboard.rei
++o src/apis/Keyboard-ReactNative.cmi : mi src/apis/Keyboard.iast
++o src/apis/Keyboard-ReactNative.cmj ../../src/apis/Keyboard.bs.js : mj src/apis/Keyboard.ast src/apis/Keyboard-ReactNative.cmi
++o src/apis/Packager.ast : astj ../../src/apis/Packager.re
++o src/apis/Packager.d : deps src/apis/Packager.ast
++o src/apis/Packager-ReactNative.cmj src/apis/Packager-ReactNative.cmi ../../src/apis/Packager.bs.js : mij src/apis/Packager.ast
++o src/apis/Platform.ast : astj ../../src/apis/Platform.re
++o src/apis/Platform.d : deps src/apis/Platform.ast src/apis/Platform.iast
++o src/apis/Platform.iast : astj ../../src/apis/Platform.rei
++o src/apis/Platform-ReactNative.cmi : mi src/apis/Platform.iast
++o src/apis/Platform-ReactNative.cmj ../../src/apis/Platform.bs.js : mj src/apis/Platform.ast src/apis/Platform-ReactNative.cmi
++o src/apis/Settings.ast : astj ../../src/apis/Settings.re
++o src/apis/Settings.d : deps src/apis/Settings.ast
++o src/apis/Settings-ReactNative.cmj src/apis/Settings-ReactNative.cmi ../../src/apis/Settings.bs.js : mij src/apis/Settings.ast
++o src/apis/Clipboard.ast : astj ../../src/apis/Clipboard.re
++o src/apis/Clipboard.d : deps src/apis/Clipboard.ast
++o src/apis/Clipboard-ReactNative.cmj src/apis/Clipboard-ReactNative.cmi ../../src/apis/Clipboard.bs.js : mij src/apis/Clipboard.ast
++o src/apis/UIManager.ast : astj ../../src/apis/UIManager.re
++o src/apis/UIManager.d : deps src/apis/UIManager.ast
++o src/apis/UIManager-ReactNative.cmj src/apis/UIManager-ReactNative.cmi ../../src/apis/UIManager.bs.js : mij src/apis/UIManager.ast
++o src/apis/Vibration.ast : astj ../../src/apis/Vibration.re
++o src/apis/Vibration.d : deps src/apis/Vibration.ast
++o src/apis/Vibration-ReactNative.cmj src/apis/Vibration-ReactNative.cmi ../../src/apis/Vibration.bs.js : mij src/apis/Vibration.ast
++o src/apis/YellowBox.ast : astj ../../src/apis/YellowBox.re
++o src/apis/YellowBox.d : deps src/apis/YellowBox.ast
++o src/apis/YellowBox-ReactNative.cmj src/apis/YellowBox-ReactNative.cmi ../../src/apis/YellowBox.bs.js : mij src/apis/YellowBox.ast
++o src/apis/CameraRoll.ast : astj ../../src/apis/CameraRoll.re
++o src/apis/CameraRoll.d : deps src/apis/CameraRoll.ast
++o src/apis/CameraRoll-ReactNative.cmj src/apis/CameraRoll-ReactNative.cmi ../../src/apis/CameraRoll.bs.js : mij src/apis/CameraRoll.ast
++o src/apis/Dimensions.ast : astj ../../src/apis/Dimensions.re
++o src/apis/Dimensions.d : deps src/apis/Dimensions.ast
++o src/apis/Dimensions-ReactNative.cmj src/apis/Dimensions-ReactNative.cmi ../../src/apis/Dimensions.bs.js : mij src/apis/Dimensions.ast
++o src/apis/PixelRatio.ast : astj ../../src/apis/PixelRatio.re
++o src/apis/PixelRatio.d : deps src/apis/PixelRatio.ast
++o src/apis/PixelRatio-ReactNative.cmj src/apis/PixelRatio-ReactNative.cmi ../../src/apis/PixelRatio.bs.js : mij src/apis/PixelRatio.ast
++o src/apis/StyleSheet.ast : astj ../../src/apis/StyleSheet.re
++o src/apis/StyleSheet.d : deps src/apis/StyleSheet.ast
++o src/apis/StyleSheet-ReactNative.cmj src/apis/StyleSheet-ReactNative.cmi ../../src/apis/StyleSheet.bs.js : mij src/apis/StyleSheet.ast
++o src/apis/AppRegistry.ast : astj ../../src/apis/AppRegistry.re
++o src/apis/AppRegistry.d : deps src/apis/AppRegistry.ast
++o src/apis/AppRegistry-ReactNative.cmj src/apis/AppRegistry-ReactNative.cmi ../../src/apis/AppRegistry.bs.js : mij src/apis/AppRegistry.ast
++o src/apis/BackHandler.ast : astj ../../src/apis/BackHandler.re
++o src/apis/BackHandler.d : deps src/apis/BackHandler.ast
++o src/apis/BackHandler-ReactNative.cmj src/apis/BackHandler-ReactNative.cmi ../../src/apis/BackHandler.bs.js : mij src/apis/BackHandler.ast
++o src/apis/GeoLocation.ast : astj ../../src/apis/GeoLocation.re
++o src/apis/GeoLocation.d : deps src/apis/GeoLocation.ast
++o src/apis/GeoLocation-ReactNative.cmj src/apis/GeoLocation-ReactNative.cmi ../../src/apis/GeoLocation.bs.js : mij src/apis/GeoLocation.ast
++o src/apis/ImageEditor.ast : astj ../../src/apis/ImageEditor.re
++o src/apis/ImageEditor.d : deps src/apis/ImageEditor.ast
++o src/apis/ImageEditor-ReactNative.cmj src/apis/ImageEditor-ReactNative.cmi ../../src/apis/ImageEditor.bs.js : mij src/apis/ImageEditor.ast
++o src/apis/AsyncStorage.ast : astj ../../src/apis/AsyncStorage.re
++o src/apis/AsyncStorage.d : deps src/apis/AsyncStorage.ast
++o src/apis/AsyncStorage-ReactNative.cmj src/apis/AsyncStorage-ReactNative.cmi ../../src/apis/AsyncStorage.bs.js : mij src/apis/AsyncStorage.ast
++o src/apis/PanResponder.ast : astj ../../src/apis/PanResponder.re
++o src/apis/PanResponder.d : deps src/apis/PanResponder.ast
++o src/apis/PanResponder-ReactNative.cmj src/apis/PanResponder-ReactNative.cmi ../../src/apis/PanResponder.bs.js : mij src/apis/PanResponder.ast
++o src/apis/ToastAndroid.ast : astj ../../src/apis/ToastAndroid.re
++o src/apis/ToastAndroid.d : deps src/apis/ToastAndroid.ast
++o src/apis/ToastAndroid-ReactNative.cmj src/apis/ToastAndroid-ReactNative.cmi ../../src/apis/ToastAndroid.bs.js : mij src/apis/ToastAndroid.ast
++o src/apis/NativeModules.ast : astj ../../src/apis/NativeModules.re
++o src/apis/NativeModules.d : deps src/apis/NativeModules.ast
++o src/apis/NativeModules-ReactNative.cmj src/apis/NativeModules-ReactNative.cmi ../../src/apis/NativeModules.bs.js : mij src/apis/NativeModules.ast
++o src/apis/ActionSheetIOS.ast : astj ../../src/apis/ActionSheetIOS.re
++o src/apis/ActionSheetIOS.d : deps src/apis/ActionSheetIOS.ast
++o src/apis/ActionSheetIOS-ReactNative.cmj src/apis/ActionSheetIOS-ReactNative.cmi ../../src/apis/ActionSheetIOS.bs.js : mij src/apis/ActionSheetIOS.ast
++o src/apis/AnimationFrame.ast : astj ../../src/apis/AnimationFrame.re
++o src/apis/AnimationFrame.d : deps src/apis/AnimationFrame.ast
++o src/apis/AnimationFrame-ReactNative.cmj src/apis/AnimationFrame-ReactNative.cmi ../../src/apis/AnimationFrame.bs.js : mij src/apis/AnimationFrame.ast
++o src/apis/ImagePickerIOS.ast : astj ../../src/apis/ImagePickerIOS.re
++o src/apis/ImagePickerIOS.d : deps src/apis/ImagePickerIOS.ast
++o src/apis/ImagePickerIOS-ReactNative.cmj src/apis/ImagePickerIOS-ReactNative.cmi ../../src/apis/ImagePickerIOS.bs.js : mij src/apis/ImagePickerIOS.ast
++o src/apis/LayoutAnimation.ast : astj ../../src/apis/LayoutAnimation.re
++o src/apis/LayoutAnimation.d : deps src/apis/LayoutAnimation.ast
++o src/apis/LayoutAnimation-ReactNative.cmj src/apis/LayoutAnimation-ReactNative.cmi ../../src/apis/LayoutAnimation.bs.js : mij src/apis/LayoutAnimation.ast
++o src/apis/AccessibilityInfo.ast : astj ../../src/apis/AccessibilityInfo.re
++o src/apis/AccessibilityInfo.d : deps src/apis/AccessibilityInfo.ast
++o src/apis/AccessibilityInfo-ReactNative.cmj src/apis/AccessibilityInfo-ReactNative.cmi ../../src/apis/AccessibilityInfo.bs.js : mij src/apis/AccessibilityInfo.ast
++o src/apis/DatePickerAndroid.ast : astj ../../src/apis/DatePickerAndroid.re
++o src/apis/DatePickerAndroid.d : deps src/apis/DatePickerAndroid.ast
++o src/apis/DatePickerAndroid-ReactNative.cmj src/apis/DatePickerAndroid-ReactNative.cmi ../../src/apis/DatePickerAndroid.bs.js : mij src/apis/DatePickerAndroid.ast
++o src/apis/EventSubscription.ast : astj ../../src/apis/EventSubscription.re
++o src/apis/EventSubscription.d : deps src/apis/EventSubscription.ast
++o src/apis/EventSubscription-ReactNative.cmj src/apis/EventSubscription-ReactNative.cmi ../../src/apis/EventSubscription.bs.js : mij src/apis/EventSubscription.ast
++o src/apis/TimePickerAndroid.ast : astj ../../src/apis/TimePickerAndroid.re
++o src/apis/TimePickerAndroid.d : deps src/apis/TimePickerAndroid.ast
++o src/apis/TimePickerAndroid-ReactNative.cmj src/apis/TimePickerAndroid-ReactNative.cmi ../../src/apis/TimePickerAndroid.bs.js : mij src/apis/TimePickerAndroid.ast
++o src/apis/InteractionManager.ast : astj ../../src/apis/InteractionManager.re
++o src/apis/InteractionManager.d : deps src/apis/InteractionManager.ast
++o src/apis/InteractionManager-ReactNative.cmj src/apis/InteractionManager-ReactNative.cmi ../../src/apis/InteractionManager.bs.js : mij src/apis/InteractionManager.ast
++o src/apis/PermissionsAndroid.ast : astj ../../src/apis/PermissionsAndroid.re
++o src/apis/PermissionsAndroid.d : deps src/apis/PermissionsAndroid.ast src/apis/PermissionsAndroid.iast
++o src/apis/PermissionsAndroid.iast : astj ../../src/apis/PermissionsAndroid.rei
++o src/apis/PermissionsAndroid-ReactNative.cmi : mi src/apis/PermissionsAndroid.iast
++o src/apis/PermissionsAndroid-ReactNative.cmj ../../src/apis/PermissionsAndroid.bs.js : mj src/apis/PermissionsAndroid.ast src/apis/PermissionsAndroid-ReactNative.cmi
++o src/apis/PushNotificationIOS.ast : astj ../../src/apis/PushNotificationIOS.re
++o src/apis/PushNotificationIOS.d : deps src/apis/PushNotificationIOS.ast
++o src/apis/PushNotificationIOS-ReactNative.cmj src/apis/PushNotificationIOS-ReactNative.cmi ../../src/apis/PushNotificationIOS.bs.js : mij src/apis/PushNotificationIOS.ast
++rule build_package
++  command = /Users/mando/Github/OldCodeWorkshop/bs-universe/packages/react-native-snap-carousel/node_modules/bs-platform/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
++  restat = 1
++o ReactNative.cmi : build_package ReactNative.mlmap
+diff --git a/node_modules/reason-react-native/lib/bs/install.ninja b/node_modules/reason-react-native/lib/bs/install.ninja
+new file mode 100644
+index 0000000..7f123fd
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/install.ninja
+@@ -0,0 +1,481 @@
++rescript = 1
++rule cp
++  command = cp $i $out
++rule touch
++ command = touch $out
++o SourceCode-ReactNative.cmi : cp ../bs/src/private/SourceCode-ReactNative.cmi
++o SourceCode-ReactNative.cmj : cp ../bs/src/private/SourceCode-ReactNative.cmj
++o SourceCode-ReactNative.cmt : cp ../bs/src/private/SourceCode-ReactNative.cmt
++o SourceCode.re : cp ../../src/private/SourceCode.re
++o NativeElement-ReactNative.cmi : cp ../bs/src/elements/NativeElement-ReactNative.cmi
++o NativeElement-ReactNative.cmj : cp ../bs/src/elements/NativeElement-ReactNative.cmj
++o NativeElement-ReactNative.cmt : cp ../bs/src/elements/NativeElement-ReactNative.cmt
++o NativeElement.re : cp ../../src/elements/NativeElement.re
++o NativeMethods-ReactNative.cmi : cp ../bs/src/elements/NativeMethods-ReactNative.cmi
++o NativeMethods-ReactNative.cmj : cp ../bs/src/elements/NativeMethods-ReactNative.cmj
++o NativeMethods-ReactNative.cmt : cp ../bs/src/elements/NativeMethods-ReactNative.cmt
++o NativeMethods.re : cp ../../src/elements/NativeMethods.re
++o WebViewElement-ReactNative.cmi : cp ../bs/src/elements/WebViewElement-ReactNative.cmi
++o WebViewElement-ReactNative.cmj : cp ../bs/src/elements/WebViewElement-ReactNative.cmj
++o WebViewElement-ReactNative.cmt : cp ../bs/src/elements/WebViewElement-ReactNative.cmt
++o WebViewElement.re : cp ../../src/elements/WebViewElement.re
++o WebViewMethods-ReactNative.cmi : cp ../bs/src/elements/WebViewMethods-ReactNative.cmi
++o WebViewMethods-ReactNative.cmj : cp ../bs/src/elements/WebViewMethods-ReactNative.cmj
++o WebViewMethods-ReactNative.cmt : cp ../bs/src/elements/WebViewMethods-ReactNative.cmt
++o WebViewMethods.re : cp ../../src/elements/WebViewMethods.re
++o TextInputElement-ReactNative.cmi : cp ../bs/src/elements/TextInputElement-ReactNative.cmi
++o TextInputElement-ReactNative.cmj : cp ../bs/src/elements/TextInputElement-ReactNative.cmj
++o TextInputElement-ReactNative.cmt : cp ../bs/src/elements/TextInputElement-ReactNative.cmt
++o TextInputElement.re : cp ../../src/elements/TextInputElement.re
++o TextInputMethods-ReactNative.cmi : cp ../bs/src/elements/TextInputMethods-ReactNative.cmi
++o TextInputMethods-ReactNative.cmj : cp ../bs/src/elements/TextInputMethods-ReactNative.cmj
++o TextInputMethods-ReactNative.cmt : cp ../bs/src/elements/TextInputMethods-ReactNative.cmt
++o TextInputMethods.re : cp ../../src/elements/TextInputMethods.re
++o ScrollViewElement-ReactNative.cmi : cp ../bs/src/elements/ScrollViewElement-ReactNative.cmi
++o ScrollViewElement-ReactNative.cmj : cp ../bs/src/elements/ScrollViewElement-ReactNative.cmj
++o ScrollViewElement-ReactNative.cmt : cp ../bs/src/elements/ScrollViewElement-ReactNative.cmt
++o ScrollViewElement.re : cp ../../src/elements/ScrollViewElement.re
++o ScrollViewMethods-ReactNative.cmi : cp ../bs/src/elements/ScrollViewMethods-ReactNative.cmi
++o ScrollViewMethods-ReactNative.cmj : cp ../bs/src/elements/ScrollViewMethods-ReactNative.cmj
++o ScrollViewMethods-ReactNative.cmt : cp ../bs/src/elements/ScrollViewMethods-ReactNative.cmt
++o ScrollViewMethods.re : cp ../../src/elements/ScrollViewMethods.re
++o VirtualizedListElement-ReactNative.cmi : cp ../bs/src/elements/VirtualizedListElement-ReactNative.cmi
++o VirtualizedListElement-ReactNative.cmj : cp ../bs/src/elements/VirtualizedListElement-ReactNative.cmj
++o VirtualizedListElement-ReactNative.cmt : cp ../bs/src/elements/VirtualizedListElement-ReactNative.cmt
++o VirtualizedListElement.re : cp ../../src/elements/VirtualizedListElement.re
++o VirtualizedListMethods-ReactNative.cmi : cp ../bs/src/elements/VirtualizedListMethods-ReactNative.cmi
++o VirtualizedListMethods-ReactNative.cmj : cp ../bs/src/elements/VirtualizedListMethods-ReactNative.cmj
++o VirtualizedListMethods-ReactNative.cmt : cp ../bs/src/elements/VirtualizedListMethods-ReactNative.cmt
++o VirtualizedListMethods.re : cp ../../src/elements/VirtualizedListMethods.re
++o TouchableOpacityElement-ReactNative.cmi : cp ../bs/src/elements/TouchableOpacityElement-ReactNative.cmi
++o TouchableOpacityElement-ReactNative.cmj : cp ../bs/src/elements/TouchableOpacityElement-ReactNative.cmj
++o TouchableOpacityElement-ReactNative.cmt : cp ../bs/src/elements/TouchableOpacityElement-ReactNative.cmt
++o TouchableOpacityElement.re : cp ../../src/elements/TouchableOpacityElement.re
++o TouchableOpacityMethods-ReactNative.cmi : cp ../bs/src/elements/TouchableOpacityMethods-ReactNative.cmi
++o TouchableOpacityMethods-ReactNative.cmj : cp ../bs/src/elements/TouchableOpacityMethods-ReactNative.cmj
++o TouchableOpacityMethods-ReactNative.cmt : cp ../bs/src/elements/TouchableOpacityMethods-ReactNative.cmt
++o TouchableOpacityMethods.re : cp ../../src/elements/TouchableOpacityMethods.re
++o ViewPagerAndroidElement-ReactNative.cmi : cp ../bs/src/elements/ViewPagerAndroidElement-ReactNative.cmi
++o ViewPagerAndroidElement-ReactNative.cmj : cp ../bs/src/elements/ViewPagerAndroidElement-ReactNative.cmj
++o ViewPagerAndroidElement-ReactNative.cmt : cp ../bs/src/elements/ViewPagerAndroidElement-ReactNative.cmt
++o ViewPagerAndroidElement.re : cp ../../src/elements/ViewPagerAndroidElement.re
++o ViewPagerAndroidMethods-ReactNative.cmi : cp ../bs/src/elements/ViewPagerAndroidMethods-ReactNative.cmi
++o ViewPagerAndroidMethods-ReactNative.cmj : cp ../bs/src/elements/ViewPagerAndroidMethods-ReactNative.cmj
++o ViewPagerAndroidMethods-ReactNative.cmt : cp ../bs/src/elements/ViewPagerAndroidMethods-ReactNative.cmt
++o ViewPagerAndroidMethods.re : cp ../../src/elements/ViewPagerAndroidMethods.re
++o DrawerLayoutAndroidElement-ReactNative.cmi : cp ../bs/src/elements/DrawerLayoutAndroidElement-ReactNative.cmi
++o DrawerLayoutAndroidElement-ReactNative.cmj : cp ../bs/src/elements/DrawerLayoutAndroidElement-ReactNative.cmj
++o DrawerLayoutAndroidElement-ReactNative.cmt : cp ../bs/src/elements/DrawerLayoutAndroidElement-ReactNative.cmt
++o DrawerLayoutAndroidElement.re : cp ../../src/elements/DrawerLayoutAndroidElement.re
++o DrawerLayoutAndroidMethods-ReactNative.cmi : cp ../bs/src/elements/DrawerLayoutAndroidMethods-ReactNative.cmi
++o DrawerLayoutAndroidMethods-ReactNative.cmj : cp ../bs/src/elements/DrawerLayoutAndroidMethods-ReactNative.cmj
++o DrawerLayoutAndroidMethods-ReactNative.cmt : cp ../bs/src/elements/DrawerLayoutAndroidMethods-ReactNative.cmt
++o DrawerLayoutAndroidMethods.re : cp ../../src/elements/DrawerLayoutAndroidMethods.re
++o Text-ReactNative.cmi : cp ../bs/src/components/Text-ReactNative.cmi
++o Text-ReactNative.cmj : cp ../bs/src/components/Text-ReactNative.cmj
++o Text-ReactNative.cmt : cp ../bs/src/components/Text-ReactNative.cmt
++o Text.re : cp ../../src/components/Text.re
++o View-ReactNative.cmi : cp ../bs/src/components/View-ReactNative.cmi
++o View-ReactNative.cmj : cp ../bs/src/components/View-ReactNative.cmj
++o View-ReactNative.cmt : cp ../bs/src/components/View-ReactNative.cmt
++o View.re : cp ../../src/components/View.re
++o Image-ReactNative.cmi : cp ../bs/src/components/Image-ReactNative.cmi
++o Image-ReactNative.cmj : cp ../bs/src/components/Image-ReactNative.cmj
++o Image-ReactNative.cmt : cp ../bs/src/components/Image-ReactNative.cmt
++o Image.re : cp ../../src/components/Image.re
++o Modal-ReactNative.cmi : cp ../bs/src/components/Modal-ReactNative.cmi
++o Modal-ReactNative.cmj : cp ../bs/src/components/Modal-ReactNative.cmj
++o Modal-ReactNative.cmt : cp ../bs/src/components/Modal-ReactNative.cmt
++o Modal.re : cp ../../src/components/Modal.re
++o Button-ReactNative.cmi : cp ../bs/src/components/Button-ReactNative.cmi
++o Button-ReactNative.cmj : cp ../bs/src/components/Button-ReactNative.cmj
++o Button-ReactNative.cmt : cp ../bs/src/components/Button-ReactNative.cmt
++o Button.re : cp ../../src/components/Button.re
++o Picker-ReactNative.cmi : cp ../bs/src/components/Picker-ReactNative.cmi
++o Picker-ReactNative.cmj : cp ../bs/src/components/Picker-ReactNative.cmj
++o Picker-ReactNative.cmt : cp ../bs/src/components/Picker-ReactNative.cmt
++o Picker.re : cp ../../src/components/Picker.re
++o Slider-ReactNative.cmi : cp ../bs/src/components/Slider-ReactNative.cmi
++o Slider-ReactNative.cmj : cp ../bs/src/components/Slider-ReactNative.cmj
++o Slider-ReactNative.cmt : cp ../bs/src/components/Slider-ReactNative.cmt
++o Slider.re : cp ../../src/components/Slider.re
++o Switch-ReactNative.cmi : cp ../bs/src/components/Switch-ReactNative.cmi
++o Switch-ReactNative.cmj : cp ../bs/src/components/Switch-ReactNative.cmj
++o Switch-ReactNative.cmt : cp ../bs/src/components/Switch-ReactNative.cmt
++o Switch.re : cp ../../src/components/Switch.re
++o WebView-ReactNative.cmi : cp ../bs/src/components/WebView-ReactNative.cmi
++o WebView-ReactNative.cmj : cp ../bs/src/components/WebView-ReactNative.cmj
++o WebView-ReactNative.cmt : cp ../bs/src/components/WebView-ReactNative.cmt
++o WebView.re : cp ../../src/components/WebView.re
++o CheckBox-ReactNative.cmi : cp ../bs/src/components/CheckBox-ReactNative.cmi
++o CheckBox-ReactNative.cmj : cp ../bs/src/components/CheckBox-ReactNative.cmj
++o CheckBox-ReactNative.cmt : cp ../bs/src/components/CheckBox-ReactNative.cmt
++o CheckBox.re : cp ../../src/components/CheckBox.re
++o FlatList-ReactNative.cmi : cp ../bs/src/components/FlatList-ReactNative.cmi
++o FlatList-ReactNative.cmj : cp ../bs/src/components/FlatList-ReactNative.cmj
++o FlatList-ReactNative.cmt : cp ../bs/src/components/FlatList-ReactNative.cmt
++o FlatList.re : cp ../../src/components/FlatList.re
++o PickerIOS-ReactNative.cmi : cp ../bs/src/components/PickerIOS-ReactNative.cmi
++o PickerIOS-ReactNative.cmj : cp ../bs/src/components/PickerIOS-ReactNative.cmj
++o PickerIOS-ReactNative.cmt : cp ../bs/src/components/PickerIOS-ReactNative.cmt
++o PickerIOS.re : cp ../../src/components/PickerIOS.re
++o StatusBar-ReactNative.cmi : cp ../bs/src/components/StatusBar-ReactNative.cmi
++o StatusBar-ReactNative.cmj : cp ../bs/src/components/StatusBar-ReactNative.cmj
++o StatusBar-ReactNative.cmt : cp ../bs/src/components/StatusBar-ReactNative.cmt
++o StatusBar.re : cp ../../src/components/StatusBar.re
++o TabBarIOS-ReactNative.cmi : cp ../bs/src/components/TabBarIOS-ReactNative.cmi
++o TabBarIOS-ReactNative.cmj : cp ../bs/src/components/TabBarIOS-ReactNative.cmj
++o TabBarIOS-ReactNative.cmt : cp ../bs/src/components/TabBarIOS-ReactNative.cmt
++o TabBarIOS.re : cp ../../src/components/TabBarIOS.re
++o TextInput-ReactNative.cmi : cp ../bs/src/components/TextInput-ReactNative.cmi
++o TextInput-ReactNative.cmj : cp ../bs/src/components/TextInput-ReactNative.cmj
++o TextInput-ReactNative.cmt : cp ../bs/src/components/TextInput-ReactNative.cmt
++o TextInput.re : cp ../../src/components/TextInput.re
++o ScrollView-ReactNative.cmi : cp ../bs/src/components/ScrollView-ReactNative.cmi
++o ScrollView-ReactNative.cmj : cp ../bs/src/components/ScrollView-ReactNative.cmj
++o ScrollView-ReactNative.cmt : cp ../bs/src/components/ScrollView-ReactNative.cmt
++o ScrollView.re : cp ../../src/components/ScrollView.re
++o SectionList-ReactNative.cmi : cp ../bs/src/components/SectionList-ReactNative.cmi
++o SectionList-ReactNative.cmj : cp ../bs/src/components/SectionList-ReactNative.cmj
++o SectionList-ReactNative.cmt : cp ../bs/src/components/SectionList-ReactNative.cmt
++o SectionList.re : cp ../../src/components/SectionList.re
++o SafeAreaView-ReactNative.cmi : cp ../bs/src/components/SafeAreaView-ReactNative.cmi
++o SafeAreaView-ReactNative.cmj : cp ../bs/src/components/SafeAreaView-ReactNative.cmj
++o SafeAreaView-ReactNative.cmt : cp ../bs/src/components/SafeAreaView-ReactNative.cmt
++o SafeAreaView.re : cp ../../src/components/SafeAreaView.re
++o DatePickerIOS-ReactNative.cmi : cp ../bs/src/components/DatePickerIOS-ReactNative.cmi
++o DatePickerIOS-ReactNative.cmj : cp ../bs/src/components/DatePickerIOS-ReactNative.cmj
++o DatePickerIOS-ReactNative.cmt : cp ../bs/src/components/DatePickerIOS-ReactNative.cmt
++o DatePickerIOS.re : cp ../../src/components/DatePickerIOS.re
++o MaskedViewIOS-ReactNative.cmi : cp ../bs/src/components/MaskedViewIOS-ReactNative.cmi
++o MaskedViewIOS-ReactNative.cmj : cp ../bs/src/components/MaskedViewIOS-ReactNative.cmj
++o MaskedViewIOS-ReactNative.cmt : cp ../bs/src/components/MaskedViewIOS-ReactNative.cmt
++o MaskedViewIOS.re : cp ../../src/components/MaskedViewIOS.re
++o RefreshControl-ReactNative.cmi : cp ../bs/src/components/RefreshControl-ReactNative.cmi
++o RefreshControl-ReactNative.cmj : cp ../bs/src/components/RefreshControl-ReactNative.cmj
++o RefreshControl-ReactNative.cmt : cp ../bs/src/components/RefreshControl-ReactNative.cmt
++o RefreshControl.re : cp ../../src/components/RefreshControl.re
++o ToolbarAndroid-ReactNative.cmi : cp ../bs/src/components/ToolbarAndroid-ReactNative.cmi
++o ToolbarAndroid-ReactNative.cmj : cp ../bs/src/components/ToolbarAndroid-ReactNative.cmj
++o ToolbarAndroid-ReactNative.cmt : cp ../bs/src/components/ToolbarAndroid-ReactNative.cmt
++o ToolbarAndroid.re : cp ../../src/components/ToolbarAndroid.re
++o ImageBackground-ReactNative.cmi : cp ../bs/src/components/ImageBackground-ReactNative.cmi
++o ImageBackground-ReactNative.cmj : cp ../bs/src/components/ImageBackground-ReactNative.cmj
++o ImageBackground-ReactNative.cmt : cp ../bs/src/components/ImageBackground-ReactNative.cmt
++o ImageBackground.re : cp ../../src/components/ImageBackground.re
++o ProgressViewIOS-ReactNative.cmi : cp ../bs/src/components/ProgressViewIOS-ReactNative.cmi
++o ProgressViewIOS-ReactNative.cmj : cp ../bs/src/components/ProgressViewIOS-ReactNative.cmj
++o ProgressViewIOS-ReactNative.cmt : cp ../bs/src/components/ProgressViewIOS-ReactNative.cmt
++o ProgressViewIOS.re : cp ../../src/components/ProgressViewIOS.re
++o SnapshotViewIOS-ReactNative.cmi : cp ../bs/src/components/SnapshotViewIOS-ReactNative.cmi
++o SnapshotViewIOS-ReactNative.cmj : cp ../bs/src/components/SnapshotViewIOS-ReactNative.cmj
++o SnapshotViewIOS-ReactNative.cmt : cp ../bs/src/components/SnapshotViewIOS-ReactNative.cmt
++o SnapshotViewIOS.re : cp ../../src/components/SnapshotViewIOS.re
++o VirtualizedList-ReactNative.cmi : cp ../bs/src/components/VirtualizedList-ReactNative.cmi
++o VirtualizedList-ReactNative.cmj : cp ../bs/src/components/VirtualizedList-ReactNative.cmj
++o VirtualizedList-ReactNative.cmt : cp ../bs/src/components/VirtualizedList-ReactNative.cmt
++o VirtualizedList.re : cp ../../src/components/VirtualizedList.re
++o TouchableOpacity-ReactNative.cmi : cp ../bs/src/components/TouchableOpacity-ReactNative.cmi
++o TouchableOpacity-ReactNative.cmj : cp ../bs/src/components/TouchableOpacity-ReactNative.cmj
++o TouchableOpacity-ReactNative.cmt : cp ../bs/src/components/TouchableOpacity-ReactNative.cmt
++o TouchableOpacity.re : cp ../../src/components/TouchableOpacity.re
++o ViewPagerAndroid-ReactNative.cmi : cp ../bs/src/components/ViewPagerAndroid-ReactNative.cmi
++o ViewPagerAndroid-ReactNative.cmj : cp ../bs/src/components/ViewPagerAndroid-ReactNative.cmj
++o ViewPagerAndroid-ReactNative.cmt : cp ../bs/src/components/ViewPagerAndroid-ReactNative.cmt
++o ViewPagerAndroid.re : cp ../../src/components/ViewPagerAndroid.re
++o ActivityIndicator-ReactNative.cmi : cp ../bs/src/components/ActivityIndicator-ReactNative.cmi
++o ActivityIndicator-ReactNative.cmj : cp ../bs/src/components/ActivityIndicator-ReactNative.cmj
++o ActivityIndicator-ReactNative.cmt : cp ../bs/src/components/ActivityIndicator-ReactNative.cmt
++o ActivityIndicator.re : cp ../../src/components/ActivityIndicator.re
++o InputAccessoryView-ReactNative.cmi : cp ../bs/src/components/InputAccessoryView-ReactNative.cmi
++o InputAccessoryView-ReactNative.cmj : cp ../bs/src/components/InputAccessoryView-ReactNative.cmj
++o InputAccessoryView-ReactNative.cmt : cp ../bs/src/components/InputAccessoryView-ReactNative.cmt
++o InputAccessoryView.re : cp ../../src/components/InputAccessoryView.re
++o ProgressBarAndroid-ReactNative.cmi : cp ../bs/src/components/ProgressBarAndroid-ReactNative.cmi
++o ProgressBarAndroid-ReactNative.cmj : cp ../bs/src/components/ProgressBarAndroid-ReactNative.cmj
++o ProgressBarAndroid-ReactNative.cmt : cp ../bs/src/components/ProgressBarAndroid-ReactNative.cmt
++o ProgressBarAndroid.re : cp ../../src/components/ProgressBarAndroid.re
++o TouchableHighlight-ReactNative.cmi : cp ../bs/src/components/TouchableHighlight-ReactNative.cmi
++o TouchableHighlight-ReactNative.cmj : cp ../bs/src/components/TouchableHighlight-ReactNative.cmj
++o TouchableHighlight-ReactNative.cmt : cp ../bs/src/components/TouchableHighlight-ReactNative.cmt
++o TouchableHighlight.re : cp ../../src/components/TouchableHighlight.re
++o DrawerLayoutAndroid-ReactNative.cmi : cp ../bs/src/components/DrawerLayoutAndroid-ReactNative.cmi
++o DrawerLayoutAndroid-ReactNative.cmj : cp ../bs/src/components/DrawerLayoutAndroid-ReactNative.cmj
++o DrawerLayoutAndroid-ReactNative.cmt : cp ../bs/src/components/DrawerLayoutAndroid-ReactNative.cmt
++o DrawerLayoutAndroid.re : cp ../../src/components/DrawerLayoutAndroid.re
++o SegmentedControlIOS-ReactNative.cmi : cp ../bs/src/components/SegmentedControlIOS-ReactNative.cmi
++o SegmentedControlIOS-ReactNative.cmj : cp ../bs/src/components/SegmentedControlIOS-ReactNative.cmj
++o SegmentedControlIOS-ReactNative.cmt : cp ../bs/src/components/SegmentedControlIOS-ReactNative.cmt
++o SegmentedControlIOS.re : cp ../../src/components/SegmentedControlIOS.re
++o KeyboardAvoidingView-ReactNative.cmi : cp ../bs/src/components/KeyboardAvoidingView-ReactNative.cmi
++o KeyboardAvoidingView-ReactNative.cmj : cp ../bs/src/components/KeyboardAvoidingView-ReactNative.cmj
++o KeyboardAvoidingView-ReactNative.cmt : cp ../bs/src/components/KeyboardAvoidingView-ReactNative.cmt
++o KeyboardAvoidingView.re : cp ../../src/components/KeyboardAvoidingView.re
++o VirtualizedSectionList-ReactNative.cmi : cp ../bs/src/components/VirtualizedSectionList-ReactNative.cmi
++o VirtualizedSectionList-ReactNative.cmj : cp ../bs/src/components/VirtualizedSectionList-ReactNative.cmj
++o VirtualizedSectionList-ReactNative.cmt : cp ../bs/src/components/VirtualizedSectionList-ReactNative.cmt
++o VirtualizedSectionList.re : cp ../../src/components/VirtualizedSectionList.re
++o TouchableNativeFeedback-ReactNative.cmi : cp ../bs/src/components/TouchableNativeFeedback-ReactNative.cmi
++o TouchableNativeFeedback-ReactNative.cmj : cp ../bs/src/components/TouchableNativeFeedback-ReactNative.cmj
++o TouchableNativeFeedback-ReactNative.cmt : cp ../bs/src/components/TouchableNativeFeedback-ReactNative.cmt
++o TouchableNativeFeedback.re : cp ../../src/components/TouchableNativeFeedback.re
++o TouchableWithoutFeedback-ReactNative.cmi : cp ../bs/src/components/TouchableWithoutFeedback-ReactNative.cmi
++o TouchableWithoutFeedback-ReactNative.cmj : cp ../bs/src/components/TouchableWithoutFeedback-ReactNative.cmj
++o TouchableWithoutFeedback-ReactNative.cmt : cp ../bs/src/components/TouchableWithoutFeedback-ReactNative.cmt
++o TouchableWithoutFeedback.re : cp ../../src/components/TouchableWithoutFeedback.re
++o TV-ReactNative.cmi : cp ../bs/src/types/TV-ReactNative.cmi
++o TV-ReactNative.cmj : cp ../bs/src/types/TV-ReactNative.cmj
++o TV-ReactNative.cmt : cp ../bs/src/types/TV-ReactNative.cmt
++o TV.re : cp ../../src/types/TV.re
++o FontVariant-ReactNative.cmi : cp ../bs/src/types/FontVariant-ReactNative.cmi
++o FontVariant-ReactNative.cmj : cp ../bs/src/types/FontVariant-ReactNative.cmj
++o FontVariant-ReactNative.cmt : cp ../bs/src/types/FontVariant-ReactNative.cmt
++o FontVariant.re : cp ../../src/types/FontVariant.re
++o FontVariant.rei : cp ../../src/types/FontVariant.rei
++o FontVariant-ReactNative.cmti : cp ../bs/src/types/FontVariant-ReactNative.cmti
++o NativeTypes-ReactNative.cmi : cp ../bs/src/types/NativeTypes-ReactNative.cmi
++o NativeTypes-ReactNative.cmj : cp ../bs/src/types/NativeTypes-ReactNative.cmj
++o NativeTypes-ReactNative.cmt : cp ../bs/src/types/NativeTypes-ReactNative.cmt
++o NativeTypes.re : cp ../../src/types/NativeTypes.re
++o Modal_Orientation-ReactNative.cmi : cp ../bs/src/types/Modal_Orientation-ReactNative.cmi
++o Modal_Orientation-ReactNative.cmj : cp ../bs/src/types/Modal_Orientation-ReactNative.cmj
++o Modal_Orientation-ReactNative.cmt : cp ../bs/src/types/Modal_Orientation-ReactNative.cmt
++o Modal_Orientation.re : cp ../../src/types/Modal_Orientation.re
++o Modal_Orientation.rei : cp ../../src/types/Modal_Orientation.rei
++o Modal_Orientation-ReactNative.cmti : cp ../bs/src/types/Modal_Orientation-ReactNative.cmti
++o AccessibilityState-ReactNative.cmi : cp ../bs/src/types/AccessibilityState-ReactNative.cmi
++o AccessibilityState-ReactNative.cmj : cp ../bs/src/types/AccessibilityState-ReactNative.cmj
++o AccessibilityState-ReactNative.cmt : cp ../bs/src/types/AccessibilityState-ReactNative.cmt
++o AccessibilityState.re : cp ../../src/types/AccessibilityState.re
++o AccessibilityState.rei : cp ../../src/types/AccessibilityState.rei
++o AccessibilityState-ReactNative.cmti : cp ../bs/src/types/AccessibilityState-ReactNative.cmti
++o AccessibilityTrait-ReactNative.cmi : cp ../bs/src/types/AccessibilityTrait-ReactNative.cmi
++o AccessibilityTrait-ReactNative.cmj : cp ../bs/src/types/AccessibilityTrait-ReactNative.cmj
++o AccessibilityTrait-ReactNative.cmt : cp ../bs/src/types/AccessibilityTrait-ReactNative.cmt
++o AccessibilityTrait.re : cp ../../src/types/AccessibilityTrait.re
++o AccessibilityTrait.rei : cp ../../src/types/AccessibilityTrait.rei
++o AccessibilityTrait-ReactNative.cmti : cp ../bs/src/types/AccessibilityTrait-ReactNative.cmti
++o ActivityIndicator_Size-ReactNative.cmi : cp ../bs/src/types/ActivityIndicator_Size-ReactNative.cmi
++o ActivityIndicator_Size-ReactNative.cmj : cp ../bs/src/types/ActivityIndicator_Size-ReactNative.cmj
++o ActivityIndicator_Size-ReactNative.cmt : cp ../bs/src/types/ActivityIndicator_Size-ReactNative.cmt
++o ActivityIndicator_Size.re : cp ../../src/types/ActivityIndicator_Size.re
++o ActivityIndicator_Size.rei : cp ../../src/types/ActivityIndicator_Size.rei
++o ActivityIndicator_Size-ReactNative.cmti : cp ../bs/src/types/ActivityIndicator_Size-ReactNative.cmti
++o AndroidInteractionState-ReactNative.cmi : cp ../bs/src/types/AndroidInteractionState-ReactNative.cmi
++o AndroidInteractionState-ReactNative.cmj : cp ../bs/src/types/AndroidInteractionState-ReactNative.cmj
++o AndroidInteractionState-ReactNative.cmt : cp ../bs/src/types/AndroidInteractionState-ReactNative.cmt
++o AndroidInteractionState.re : cp ../../src/types/AndroidInteractionState.re
++o AndroidInteractionState.rei : cp ../../src/types/AndroidInteractionState.rei
++o AndroidInteractionState-ReactNative.cmti : cp ../bs/src/types/AndroidInteractionState-ReactNative.cmti
++o Modal_OrientationChange-ReactNative.cmi : cp ../bs/src/types/Modal_OrientationChange-ReactNative.cmi
++o Modal_OrientationChange-ReactNative.cmj : cp ../bs/src/types/Modal_OrientationChange-ReactNative.cmj
++o Modal_OrientationChange-ReactNative.cmt : cp ../bs/src/types/Modal_OrientationChange-ReactNative.cmt
++o Modal_OrientationChange.re : cp ../../src/types/Modal_OrientationChange.re
++o Modal_OrientationChange.rei : cp ../../src/types/Modal_OrientationChange.rei
++o Modal_OrientationChange-ReactNative.cmti : cp ../bs/src/types/Modal_OrientationChange-ReactNative.cmti
++o WebView_DecelerationRate-ReactNative.cmi : cp ../bs/src/types/WebView_DecelerationRate-ReactNative.cmi
++o WebView_DecelerationRate-ReactNative.cmj : cp ../bs/src/types/WebView_DecelerationRate-ReactNative.cmj
++o WebView_DecelerationRate-ReactNative.cmt : cp ../bs/src/types/WebView_DecelerationRate-ReactNative.cmt
++o WebView_DecelerationRate.re : cp ../../src/types/WebView_DecelerationRate.re
++o WebView_DecelerationRate.rei : cp ../../src/types/WebView_DecelerationRate.rei
++o WebView_DecelerationRate-ReactNative.cmti : cp ../bs/src/types/WebView_DecelerationRate-ReactNative.cmti
++o WebView_DataDetectorTypes-ReactNative.cmi : cp ../bs/src/types/WebView_DataDetectorTypes-ReactNative.cmi
++o WebView_DataDetectorTypes-ReactNative.cmj : cp ../bs/src/types/WebView_DataDetectorTypes-ReactNative.cmj
++o WebView_DataDetectorTypes-ReactNative.cmt : cp ../bs/src/types/WebView_DataDetectorTypes-ReactNative.cmt
++o WebView_DataDetectorTypes.re : cp ../../src/types/WebView_DataDetectorTypes.re
++o WebView_DataDetectorTypes.rei : cp ../../src/types/WebView_DataDetectorTypes.rei
++o WebView_DataDetectorTypes-ReactNative.cmti : cp ../bs/src/types/WebView_DataDetectorTypes-ReactNative.cmti
++o TextInput_DataDetectorTypes-ReactNative.cmi : cp ../bs/src/types/TextInput_DataDetectorTypes-ReactNative.cmi
++o TextInput_DataDetectorTypes-ReactNative.cmj : cp ../bs/src/types/TextInput_DataDetectorTypes-ReactNative.cmj
++o TextInput_DataDetectorTypes-ReactNative.cmt : cp ../bs/src/types/TextInput_DataDetectorTypes-ReactNative.cmt
++o TextInput_DataDetectorTypes.re : cp ../../src/types/TextInput_DataDetectorTypes.re
++o TextInput_DataDetectorTypes.rei : cp ../../src/types/TextInput_DataDetectorTypes.rei
++o TextInput_DataDetectorTypes-ReactNative.cmti : cp ../bs/src/types/TextInput_DataDetectorTypes-ReactNative.cmti
++o Alert-ReactNative.cmi : cp ../bs/src/apis/Alert-ReactNative.cmi
++o Alert-ReactNative.cmj : cp ../bs/src/apis/Alert-ReactNative.cmj
++o Alert-ReactNative.cmt : cp ../bs/src/apis/Alert-ReactNative.cmt
++o Alert.re : cp ../../src/apis/Alert.re
++o Color-ReactNative.cmi : cp ../bs/src/apis/Color-ReactNative.cmi
++o Color-ReactNative.cmj : cp ../bs/src/apis/Color-ReactNative.cmj
++o Color-ReactNative.cmt : cp ../bs/src/apis/Color-ReactNative.cmt
++o Color.re : cp ../../src/apis/Color.re
++o Event-ReactNative.cmi : cp ../bs/src/apis/Event-ReactNative.cmi
++o Event-ReactNative.cmj : cp ../bs/src/apis/Event-ReactNative.cmj
++o Event-ReactNative.cmt : cp ../bs/src/apis/Event-ReactNative.cmt
++o Event.re : cp ../../src/apis/Event.re
++o Share-ReactNative.cmi : cp ../bs/src/apis/Share-ReactNative.cmi
++o Share-ReactNative.cmj : cp ../bs/src/apis/Share-ReactNative.cmj
++o Share-ReactNative.cmt : cp ../bs/src/apis/Share-ReactNative.cmt
++o Share.re : cp ../../src/apis/Share.re
++o Style-ReactNative.cmi : cp ../bs/src/apis/Style-ReactNative.cmi
++o Style-ReactNative.cmj : cp ../bs/src/apis/Style-ReactNative.cmj
++o Style-ReactNative.cmt : cp ../bs/src/apis/Style-ReactNative.cmt
++o Style.re : cp ../../src/apis/Style.re
++o Style.rei : cp ../../src/apis/Style.rei
++o Style-ReactNative.cmti : cp ../bs/src/apis/Style-ReactNative.cmti
++o Easing-ReactNative.cmi : cp ../bs/src/apis/Easing-ReactNative.cmi
++o Easing-ReactNative.cmj : cp ../bs/src/apis/Easing-ReactNative.cmj
++o Easing-ReactNative.cmt : cp ../bs/src/apis/Easing-ReactNative.cmt
++o Easing.re : cp ../../src/apis/Easing.re
++o Global-ReactNative.cmi : cp ../bs/src/apis/Global-ReactNative.cmi
++o Global-ReactNative.cmj : cp ../bs/src/apis/Global-ReactNative.cmj
++o Global-ReactNative.cmt : cp ../bs/src/apis/Global-ReactNative.cmt
++o Global.re : cp ../../src/apis/Global.re
++o Linking-ReactNative.cmi : cp ../bs/src/apis/Linking-ReactNative.cmi
++o Linking-ReactNative.cmj : cp ../bs/src/apis/Linking-ReactNative.cmj
++o Linking-ReactNative.cmt : cp ../bs/src/apis/Linking-ReactNative.cmt
++o Linking.re : cp ../../src/apis/Linking.re
++o NetInfo-ReactNative.cmi : cp ../bs/src/apis/NetInfo-ReactNative.cmi
++o NetInfo-ReactNative.cmj : cp ../bs/src/apis/NetInfo-ReactNative.cmj
++o NetInfo-ReactNative.cmt : cp ../bs/src/apis/NetInfo-ReactNative.cmt
++o NetInfo.re : cp ../../src/apis/NetInfo.re
++o NetInfo.rei : cp ../../src/apis/NetInfo.rei
++o NetInfo-ReactNative.cmti : cp ../bs/src/apis/NetInfo-ReactNative.cmti
++o AlertIOS-ReactNative.cmi : cp ../bs/src/apis/AlertIOS-ReactNative.cmi
++o AlertIOS-ReactNative.cmj : cp ../bs/src/apis/AlertIOS-ReactNative.cmj
++o AlertIOS-ReactNative.cmt : cp ../bs/src/apis/AlertIOS-ReactNative.cmt
++o AlertIOS.re : cp ../../src/apis/AlertIOS.re
++o Animated-ReactNative.cmi : cp ../bs/src/apis/Animated-ReactNative.cmi
++o Animated-ReactNative.cmj : cp ../bs/src/apis/Animated-ReactNative.cmj
++o Animated-ReactNative.cmt : cp ../bs/src/apis/Animated-ReactNative.cmt
++o Animated.re : cp ../../src/apis/Animated.re
++o AppState-ReactNative.cmi : cp ../bs/src/apis/AppState-ReactNative.cmi
++o AppState-ReactNative.cmj : cp ../bs/src/apis/AppState-ReactNative.cmj
++o AppState-ReactNative.cmt : cp ../bs/src/apis/AppState-ReactNative.cmt
++o AppState.re : cp ../../src/apis/AppState.re
++o AppState.rei : cp ../../src/apis/AppState.rei
++o AppState-ReactNative.cmti : cp ../bs/src/apis/AppState-ReactNative.cmti
++o Keyboard-ReactNative.cmi : cp ../bs/src/apis/Keyboard-ReactNative.cmi
++o Keyboard-ReactNative.cmj : cp ../bs/src/apis/Keyboard-ReactNative.cmj
++o Keyboard-ReactNative.cmt : cp ../bs/src/apis/Keyboard-ReactNative.cmt
++o Keyboard.re : cp ../../src/apis/Keyboard.re
++o Keyboard.rei : cp ../../src/apis/Keyboard.rei
++o Keyboard-ReactNative.cmti : cp ../bs/src/apis/Keyboard-ReactNative.cmti
++o Packager-ReactNative.cmi : cp ../bs/src/apis/Packager-ReactNative.cmi
++o Packager-ReactNative.cmj : cp ../bs/src/apis/Packager-ReactNative.cmj
++o Packager-ReactNative.cmt : cp ../bs/src/apis/Packager-ReactNative.cmt
++o Packager.re : cp ../../src/apis/Packager.re
++o Platform-ReactNative.cmi : cp ../bs/src/apis/Platform-ReactNative.cmi
++o Platform-ReactNative.cmj : cp ../bs/src/apis/Platform-ReactNative.cmj
++o Platform-ReactNative.cmt : cp ../bs/src/apis/Platform-ReactNative.cmt
++o Platform.re : cp ../../src/apis/Platform.re
++o Platform.rei : cp ../../src/apis/Platform.rei
++o Platform-ReactNative.cmti : cp ../bs/src/apis/Platform-ReactNative.cmti
++o Settings-ReactNative.cmi : cp ../bs/src/apis/Settings-ReactNative.cmi
++o Settings-ReactNative.cmj : cp ../bs/src/apis/Settings-ReactNative.cmj
++o Settings-ReactNative.cmt : cp ../bs/src/apis/Settings-ReactNative.cmt
++o Settings.re : cp ../../src/apis/Settings.re
++o Clipboard-ReactNative.cmi : cp ../bs/src/apis/Clipboard-ReactNative.cmi
++o Clipboard-ReactNative.cmj : cp ../bs/src/apis/Clipboard-ReactNative.cmj
++o Clipboard-ReactNative.cmt : cp ../bs/src/apis/Clipboard-ReactNative.cmt
++o Clipboard.re : cp ../../src/apis/Clipboard.re
++o UIManager-ReactNative.cmi : cp ../bs/src/apis/UIManager-ReactNative.cmi
++o UIManager-ReactNative.cmj : cp ../bs/src/apis/UIManager-ReactNative.cmj
++o UIManager-ReactNative.cmt : cp ../bs/src/apis/UIManager-ReactNative.cmt
++o UIManager.re : cp ../../src/apis/UIManager.re
++o Vibration-ReactNative.cmi : cp ../bs/src/apis/Vibration-ReactNative.cmi
++o Vibration-ReactNative.cmj : cp ../bs/src/apis/Vibration-ReactNative.cmj
++o Vibration-ReactNative.cmt : cp ../bs/src/apis/Vibration-ReactNative.cmt
++o Vibration.re : cp ../../src/apis/Vibration.re
++o YellowBox-ReactNative.cmi : cp ../bs/src/apis/YellowBox-ReactNative.cmi
++o YellowBox-ReactNative.cmj : cp ../bs/src/apis/YellowBox-ReactNative.cmj
++o YellowBox-ReactNative.cmt : cp ../bs/src/apis/YellowBox-ReactNative.cmt
++o YellowBox.re : cp ../../src/apis/YellowBox.re
++o CameraRoll-ReactNative.cmi : cp ../bs/src/apis/CameraRoll-ReactNative.cmi
++o CameraRoll-ReactNative.cmj : cp ../bs/src/apis/CameraRoll-ReactNative.cmj
++o CameraRoll-ReactNative.cmt : cp ../bs/src/apis/CameraRoll-ReactNative.cmt
++o CameraRoll.re : cp ../../src/apis/CameraRoll.re
++o Dimensions-ReactNative.cmi : cp ../bs/src/apis/Dimensions-ReactNative.cmi
++o Dimensions-ReactNative.cmj : cp ../bs/src/apis/Dimensions-ReactNative.cmj
++o Dimensions-ReactNative.cmt : cp ../bs/src/apis/Dimensions-ReactNative.cmt
++o Dimensions.re : cp ../../src/apis/Dimensions.re
++o PixelRatio-ReactNative.cmi : cp ../bs/src/apis/PixelRatio-ReactNative.cmi
++o PixelRatio-ReactNative.cmj : cp ../bs/src/apis/PixelRatio-ReactNative.cmj
++o PixelRatio-ReactNative.cmt : cp ../bs/src/apis/PixelRatio-ReactNative.cmt
++o PixelRatio.re : cp ../../src/apis/PixelRatio.re
++o StyleSheet-ReactNative.cmi : cp ../bs/src/apis/StyleSheet-ReactNative.cmi
++o StyleSheet-ReactNative.cmj : cp ../bs/src/apis/StyleSheet-ReactNative.cmj
++o StyleSheet-ReactNative.cmt : cp ../bs/src/apis/StyleSheet-ReactNative.cmt
++o StyleSheet.re : cp ../../src/apis/StyleSheet.re
++o AppRegistry-ReactNative.cmi : cp ../bs/src/apis/AppRegistry-ReactNative.cmi
++o AppRegistry-ReactNative.cmj : cp ../bs/src/apis/AppRegistry-ReactNative.cmj
++o AppRegistry-ReactNative.cmt : cp ../bs/src/apis/AppRegistry-ReactNative.cmt
++o AppRegistry.re : cp ../../src/apis/AppRegistry.re
++o BackHandler-ReactNative.cmi : cp ../bs/src/apis/BackHandler-ReactNative.cmi
++o BackHandler-ReactNative.cmj : cp ../bs/src/apis/BackHandler-ReactNative.cmj
++o BackHandler-ReactNative.cmt : cp ../bs/src/apis/BackHandler-ReactNative.cmt
++o BackHandler.re : cp ../../src/apis/BackHandler.re
++o GeoLocation-ReactNative.cmi : cp ../bs/src/apis/GeoLocation-ReactNative.cmi
++o GeoLocation-ReactNative.cmj : cp ../bs/src/apis/GeoLocation-ReactNative.cmj
++o GeoLocation-ReactNative.cmt : cp ../bs/src/apis/GeoLocation-ReactNative.cmt
++o GeoLocation.re : cp ../../src/apis/GeoLocation.re
++o ImageEditor-ReactNative.cmi : cp ../bs/src/apis/ImageEditor-ReactNative.cmi
++o ImageEditor-ReactNative.cmj : cp ../bs/src/apis/ImageEditor-ReactNative.cmj
++o ImageEditor-ReactNative.cmt : cp ../bs/src/apis/ImageEditor-ReactNative.cmt
++o ImageEditor.re : cp ../../src/apis/ImageEditor.re
++o AsyncStorage-ReactNative.cmi : cp ../bs/src/apis/AsyncStorage-ReactNative.cmi
++o AsyncStorage-ReactNative.cmj : cp ../bs/src/apis/AsyncStorage-ReactNative.cmj
++o AsyncStorage-ReactNative.cmt : cp ../bs/src/apis/AsyncStorage-ReactNative.cmt
++o AsyncStorage.re : cp ../../src/apis/AsyncStorage.re
++o PanResponder-ReactNative.cmi : cp ../bs/src/apis/PanResponder-ReactNative.cmi
++o PanResponder-ReactNative.cmj : cp ../bs/src/apis/PanResponder-ReactNative.cmj
++o PanResponder-ReactNative.cmt : cp ../bs/src/apis/PanResponder-ReactNative.cmt
++o PanResponder.re : cp ../../src/apis/PanResponder.re
++o ToastAndroid-ReactNative.cmi : cp ../bs/src/apis/ToastAndroid-ReactNative.cmi
++o ToastAndroid-ReactNative.cmj : cp ../bs/src/apis/ToastAndroid-ReactNative.cmj
++o ToastAndroid-ReactNative.cmt : cp ../bs/src/apis/ToastAndroid-ReactNative.cmt
++o ToastAndroid.re : cp ../../src/apis/ToastAndroid.re
++o NativeModules-ReactNative.cmi : cp ../bs/src/apis/NativeModules-ReactNative.cmi
++o NativeModules-ReactNative.cmj : cp ../bs/src/apis/NativeModules-ReactNative.cmj
++o NativeModules-ReactNative.cmt : cp ../bs/src/apis/NativeModules-ReactNative.cmt
++o NativeModules.re : cp ../../src/apis/NativeModules.re
++o ActionSheetIOS-ReactNative.cmi : cp ../bs/src/apis/ActionSheetIOS-ReactNative.cmi
++o ActionSheetIOS-ReactNative.cmj : cp ../bs/src/apis/ActionSheetIOS-ReactNative.cmj
++o ActionSheetIOS-ReactNative.cmt : cp ../bs/src/apis/ActionSheetIOS-ReactNative.cmt
++o ActionSheetIOS.re : cp ../../src/apis/ActionSheetIOS.re
++o AnimationFrame-ReactNative.cmi : cp ../bs/src/apis/AnimationFrame-ReactNative.cmi
++o AnimationFrame-ReactNative.cmj : cp ../bs/src/apis/AnimationFrame-ReactNative.cmj
++o AnimationFrame-ReactNative.cmt : cp ../bs/src/apis/AnimationFrame-ReactNative.cmt
++o AnimationFrame.re : cp ../../src/apis/AnimationFrame.re
++o ImagePickerIOS-ReactNative.cmi : cp ../bs/src/apis/ImagePickerIOS-ReactNative.cmi
++o ImagePickerIOS-ReactNative.cmj : cp ../bs/src/apis/ImagePickerIOS-ReactNative.cmj
++o ImagePickerIOS-ReactNative.cmt : cp ../bs/src/apis/ImagePickerIOS-ReactNative.cmt
++o ImagePickerIOS.re : cp ../../src/apis/ImagePickerIOS.re
++o LayoutAnimation-ReactNative.cmi : cp ../bs/src/apis/LayoutAnimation-ReactNative.cmi
++o LayoutAnimation-ReactNative.cmj : cp ../bs/src/apis/LayoutAnimation-ReactNative.cmj
++o LayoutAnimation-ReactNative.cmt : cp ../bs/src/apis/LayoutAnimation-ReactNative.cmt
++o LayoutAnimation.re : cp ../../src/apis/LayoutAnimation.re
++o AccessibilityInfo-ReactNative.cmi : cp ../bs/src/apis/AccessibilityInfo-ReactNative.cmi
++o AccessibilityInfo-ReactNative.cmj : cp ../bs/src/apis/AccessibilityInfo-ReactNative.cmj
++o AccessibilityInfo-ReactNative.cmt : cp ../bs/src/apis/AccessibilityInfo-ReactNative.cmt
++o AccessibilityInfo.re : cp ../../src/apis/AccessibilityInfo.re
++o DatePickerAndroid-ReactNative.cmi : cp ../bs/src/apis/DatePickerAndroid-ReactNative.cmi
++o DatePickerAndroid-ReactNative.cmj : cp ../bs/src/apis/DatePickerAndroid-ReactNative.cmj
++o DatePickerAndroid-ReactNative.cmt : cp ../bs/src/apis/DatePickerAndroid-ReactNative.cmt
++o DatePickerAndroid.re : cp ../../src/apis/DatePickerAndroid.re
++o EventSubscription-ReactNative.cmi : cp ../bs/src/apis/EventSubscription-ReactNative.cmi
++o EventSubscription-ReactNative.cmj : cp ../bs/src/apis/EventSubscription-ReactNative.cmj
++o EventSubscription-ReactNative.cmt : cp ../bs/src/apis/EventSubscription-ReactNative.cmt
++o EventSubscription.re : cp ../../src/apis/EventSubscription.re
++o TimePickerAndroid-ReactNative.cmi : cp ../bs/src/apis/TimePickerAndroid-ReactNative.cmi
++o TimePickerAndroid-ReactNative.cmj : cp ../bs/src/apis/TimePickerAndroid-ReactNative.cmj
++o TimePickerAndroid-ReactNative.cmt : cp ../bs/src/apis/TimePickerAndroid-ReactNative.cmt
++o TimePickerAndroid.re : cp ../../src/apis/TimePickerAndroid.re
++o InteractionManager-ReactNative.cmi : cp ../bs/src/apis/InteractionManager-ReactNative.cmi
++o InteractionManager-ReactNative.cmj : cp ../bs/src/apis/InteractionManager-ReactNative.cmj
++o InteractionManager-ReactNative.cmt : cp ../bs/src/apis/InteractionManager-ReactNative.cmt
++o InteractionManager.re : cp ../../src/apis/InteractionManager.re
++o PermissionsAndroid-ReactNative.cmi : cp ../bs/src/apis/PermissionsAndroid-ReactNative.cmi
++o PermissionsAndroid-ReactNative.cmj : cp ../bs/src/apis/PermissionsAndroid-ReactNative.cmj
++o PermissionsAndroid-ReactNative.cmt : cp ../bs/src/apis/PermissionsAndroid-ReactNative.cmt
++o PermissionsAndroid.re : cp ../../src/apis/PermissionsAndroid.re
++o PermissionsAndroid.rei : cp ../../src/apis/PermissionsAndroid.rei
++o PermissionsAndroid-ReactNative.cmti : cp ../bs/src/apis/PermissionsAndroid-ReactNative.cmti
++o PushNotificationIOS-ReactNative.cmi : cp ../bs/src/apis/PushNotificationIOS-ReactNative.cmi
++o PushNotificationIOS-ReactNative.cmj : cp ../bs/src/apis/PushNotificationIOS-ReactNative.cmj
++o PushNotificationIOS-ReactNative.cmt : cp ../bs/src/apis/PushNotificationIOS-ReactNative.cmt
++o PushNotificationIOS.re : cp ../../src/apis/PushNotificationIOS.re
++o ReactNative.cmi : cp ../bs/ReactNative.cmi
++o ReactNative.cmj : cp ../bs/ReactNative.cmj
++o ReactNative.cmt : cp ../bs/ReactNative.cmt
++build install.stamp : touch SourceCode-ReactNative.cmi SourceCode-ReactNative.cmj NativeElement-ReactNative.cmi NativeElement-ReactNative.cmj NativeMethods-ReactNative.cmi NativeMethods-ReactNative.cmj WebViewElement-ReactNative.cmi WebViewElement-ReactNative.cmj WebViewMethods-ReactNative.cmi WebViewMethods-ReactNative.cmj TextInputElement-ReactNative.cmi TextInputElement-ReactNative.cmj TextInputMethods-ReactNative.cmi TextInputMethods-ReactNative.cmj ScrollViewElement-ReactNative.cmi ScrollViewElement-ReactNative.cmj ScrollViewMethods-ReactNative.cmi ScrollViewMethods-ReactNative.cmj VirtualizedListElement-ReactNative.cmi VirtualizedListElement-ReactNative.cmj VirtualizedListMethods-ReactNative.cmi VirtualizedListMethods-ReactNative.cmj TouchableOpacityElement-ReactNative.cmi TouchableOpacityElement-ReactNative.cmj TouchableOpacityMethods-ReactNative.cmi TouchableOpacityMethods-ReactNative.cmj ViewPagerAndroidElement-ReactNative.cmi ViewPagerAndroidElement-ReactNative.cmj ViewPagerAndroidMethods-ReactNative.cmi ViewPagerAndroidMethods-ReactNative.cmj DrawerLayoutAndroidElement-ReactNative.cmi DrawerLayoutAndroidElement-ReactNative.cmj DrawerLayoutAndroidMethods-ReactNative.cmi DrawerLayoutAndroidMethods-ReactNative.cmj Text-ReactNative.cmi Text-ReactNative.cmj View-ReactNative.cmi View-ReactNative.cmj Image-ReactNative.cmi Image-ReactNative.cmj Modal-ReactNative.cmi Modal-ReactNative.cmj Button-ReactNative.cmi Button-ReactNative.cmj Picker-ReactNative.cmi Picker-ReactNative.cmj Slider-ReactNative.cmi Slider-ReactNative.cmj Switch-ReactNative.cmi Switch-ReactNative.cmj WebView-ReactNative.cmi WebView-ReactNative.cmj CheckBox-ReactNative.cmi CheckBox-ReactNative.cmj FlatList-ReactNative.cmi FlatList-ReactNative.cmj PickerIOS-ReactNative.cmi PickerIOS-ReactNative.cmj StatusBar-ReactNative.cmi StatusBar-ReactNative.cmj TabBarIOS-ReactNative.cmi TabBarIOS-ReactNative.cmj TextInput-ReactNative.cmi TextInput-ReactNative.cmj ScrollView-ReactNative.cmi ScrollView-ReactNative.cmj SectionList-ReactNative.cmi SectionList-ReactNative.cmj SafeAreaView-ReactNative.cmi SafeAreaView-ReactNative.cmj DatePickerIOS-ReactNative.cmi DatePickerIOS-ReactNative.cmj MaskedViewIOS-ReactNative.cmi MaskedViewIOS-ReactNative.cmj RefreshControl-ReactNative.cmi RefreshControl-ReactNative.cmj ToolbarAndroid-ReactNative.cmi ToolbarAndroid-ReactNative.cmj ImageBackground-ReactNative.cmi ImageBackground-ReactNative.cmj ProgressViewIOS-ReactNative.cmi ProgressViewIOS-ReactNative.cmj SnapshotViewIOS-ReactNative.cmi SnapshotViewIOS-ReactNative.cmj VirtualizedList-ReactNative.cmi VirtualizedList-ReactNative.cmj TouchableOpacity-ReactNative.cmi TouchableOpacity-ReactNative.cmj ViewPagerAndroid-ReactNative.cmi ViewPagerAndroid-ReactNative.cmj ActivityIndicator-ReactNative.cmi ActivityIndicator-ReactNative.cmj InputAccessoryView-ReactNative.cmi InputAccessoryView-ReactNative.cmj ProgressBarAndroid-ReactNative.cmi ProgressBarAndroid-ReactNative.cmj TouchableHighlight-ReactNative.cmi TouchableHighlight-ReactNative.cmj DrawerLayoutAndroid-ReactNative.cmi DrawerLayoutAndroid-ReactNative.cmj SegmentedControlIOS-ReactNative.cmi SegmentedControlIOS-ReactNative.cmj KeyboardAvoidingView-ReactNative.cmi KeyboardAvoidingView-ReactNative.cmj VirtualizedSectionList-ReactNative.cmi VirtualizedSectionList-ReactNative.cmj TouchableNativeFeedback-ReactNative.cmi TouchableNativeFeedback-ReactNative.cmj TouchableWithoutFeedback-ReactNative.cmi TouchableWithoutFeedback-ReactNative.cmj TV-ReactNative.cmi TV-ReactNative.cmj FontVariant-ReactNative.cmi FontVariant-ReactNative.cmj NativeTypes-ReactNative.cmi NativeTypes-ReactNative.cmj Modal_Orientation-ReactNative.cmi Modal_Orientation-ReactNative.cmj AccessibilityState-ReactNative.cmi AccessibilityState-ReactNative.cmj AccessibilityTrait-ReactNative.cmi AccessibilityTrait-ReactNative.cmj ActivityIndicator_Size-ReactNative.cmi ActivityIndicator_Size-ReactNative.cmj AndroidInteractionState-ReactNative.cmi AndroidInteractionState-ReactNative.cmj Modal_OrientationChange-ReactNative.cmi Modal_OrientationChange-ReactNative.cmj WebView_DecelerationRate-ReactNative.cmi WebView_DecelerationRate-ReactNative.cmj WebView_DataDetectorTypes-ReactNative.cmi WebView_DataDetectorTypes-ReactNative.cmj TextInput_DataDetectorTypes-ReactNative.cmi TextInput_DataDetectorTypes-ReactNative.cmj Alert-ReactNative.cmi Alert-ReactNative.cmj Color-ReactNative.cmi Color-ReactNative.cmj Event-ReactNative.cmi Event-ReactNative.cmj Share-ReactNative.cmi Share-ReactNative.cmj Style-ReactNative.cmi Style-ReactNative.cmj Easing-ReactNative.cmi Easing-ReactNative.cmj Global-ReactNative.cmi Global-ReactNative.cmj Linking-ReactNative.cmi Linking-ReactNative.cmj NetInfo-ReactNative.cmi NetInfo-ReactNative.cmj AlertIOS-ReactNative.cmi AlertIOS-ReactNative.cmj Animated-ReactNative.cmi Animated-ReactNative.cmj AppState-ReactNative.cmi AppState-ReactNative.cmj Keyboard-ReactNative.cmi Keyboard-ReactNative.cmj Packager-ReactNative.cmi Packager-ReactNative.cmj Platform-ReactNative.cmi Platform-ReactNative.cmj Settings-ReactNative.cmi Settings-ReactNative.cmj Clipboard-ReactNative.cmi Clipboard-ReactNative.cmj UIManager-ReactNative.cmi UIManager-ReactNative.cmj Vibration-ReactNative.cmi Vibration-ReactNative.cmj YellowBox-ReactNative.cmi YellowBox-ReactNative.cmj CameraRoll-ReactNative.cmi CameraRoll-ReactNative.cmj Dimensions-ReactNative.cmi Dimensions-ReactNative.cmj PixelRatio-ReactNative.cmi PixelRatio-ReactNative.cmj StyleSheet-ReactNative.cmi StyleSheet-ReactNative.cmj AppRegistry-ReactNative.cmi AppRegistry-ReactNative.cmj BackHandler-ReactNative.cmi BackHandler-ReactNative.cmj GeoLocation-ReactNative.cmi GeoLocation-ReactNative.cmj ImageEditor-ReactNative.cmi ImageEditor-ReactNative.cmj AsyncStorage-ReactNative.cmi AsyncStorage-ReactNative.cmj PanResponder-ReactNative.cmi PanResponder-ReactNative.cmj ToastAndroid-ReactNative.cmi ToastAndroid-ReactNative.cmj NativeModules-ReactNative.cmi NativeModules-ReactNative.cmj ActionSheetIOS-ReactNative.cmi ActionSheetIOS-ReactNative.cmj AnimationFrame-ReactNative.cmi AnimationFrame-ReactNative.cmj ImagePickerIOS-ReactNative.cmi ImagePickerIOS-ReactNative.cmj LayoutAnimation-ReactNative.cmi LayoutAnimation-ReactNative.cmj AccessibilityInfo-ReactNative.cmi AccessibilityInfo-ReactNative.cmj DatePickerAndroid-ReactNative.cmi DatePickerAndroid-ReactNative.cmj EventSubscription-ReactNative.cmi EventSubscription-ReactNative.cmj TimePickerAndroid-ReactNative.cmi TimePickerAndroid-ReactNative.cmj InteractionManager-ReactNative.cmi InteractionManager-ReactNative.cmj PermissionsAndroid-ReactNative.cmi PermissionsAndroid-ReactNative.cmj PushNotificationIOS-ReactNative.cmi PushNotificationIOS-ReactNative.cmj ReactNative.cmi ReactNative.cmj
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Button.ast b/node_modules/reason-react-native/lib/bs/src/components/Button.ast
+new file mode 100644
+index 0000000..c3a51c0
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Button.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Button.d b/node_modules/reason-react-native/lib/bs/src/components/Button.d
+new file mode 100644
+index 0000000..16304a5
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/components/Button.d
+@@ -0,0 +1 @@
++src/components/Button-ReactNative.cmj : ReactNative.cmi src/apis/Color-ReactNative.cmj src/apis/Color-ReactNative.cmi src/apis/Event-ReactNative.cmj src/apis/Event-ReactNative.cmi src/elements/NativeElement-ReactNative.cmj src/elements/NativeElement-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/CheckBox.ast b/node_modules/reason-react-native/lib/bs/src/components/CheckBox.ast
+new file mode 100644
+index 0000000..46d80be
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/CheckBox.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/DatePickerIOS.ast b/node_modules/reason-react-native/lib/bs/src/components/DatePickerIOS.ast
+new file mode 100644
+index 0000000..936dde8
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/DatePickerIOS.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/FlatList.ast b/node_modules/reason-react-native/lib/bs/src/components/FlatList.ast
+new file mode 100644
+index 0000000..4b0a9e8
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/FlatList.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Image.ast b/node_modules/reason-react-native/lib/bs/src/components/Image.ast
+new file mode 100644
+index 0000000..828f773
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Image.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/MaskedViewIOS.ast b/node_modules/reason-react-native/lib/bs/src/components/MaskedViewIOS.ast
+new file mode 100644
+index 0000000..35681f2
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/MaskedViewIOS.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Modal.ast b/node_modules/reason-react-native/lib/bs/src/components/Modal.ast
+new file mode 100644
+index 0000000..bae5b11
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Modal.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Picker.ast b/node_modules/reason-react-native/lib/bs/src/components/Picker.ast
+new file mode 100644
+index 0000000..e63935c
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Picker.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/PickerIOS.ast b/node_modules/reason-react-native/lib/bs/src/components/PickerIOS.ast
+new file mode 100644
+index 0000000..153bf23
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/PickerIOS.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/SafeAreaView.ast b/node_modules/reason-react-native/lib/bs/src/components/SafeAreaView.ast
+new file mode 100644
+index 0000000..ac9d8a8
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/SafeAreaView.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/ScrollView.ast b/node_modules/reason-react-native/lib/bs/src/components/ScrollView.ast
+new file mode 100644
+index 0000000..0fb9403
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/ScrollView.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/SectionList.ast b/node_modules/reason-react-native/lib/bs/src/components/SectionList.ast
+new file mode 100644
+index 0000000..8f29d19
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/SectionList.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Slider.ast b/node_modules/reason-react-native/lib/bs/src/components/Slider.ast
+new file mode 100644
+index 0000000..6826f4e
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Slider.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/StatusBar.ast b/node_modules/reason-react-native/lib/bs/src/components/StatusBar.ast
+new file mode 100644
+index 0000000..cb802f2
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/StatusBar.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Switch.ast b/node_modules/reason-react-native/lib/bs/src/components/Switch.ast
+new file mode 100644
+index 0000000..6dda86f
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Switch.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/TabBarIOS.ast b/node_modules/reason-react-native/lib/bs/src/components/TabBarIOS.ast
+new file mode 100644
+index 0000000..82470fe
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/TabBarIOS.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/Text.ast b/node_modules/reason-react-native/lib/bs/src/components/Text.ast
+new file mode 100644
+index 0000000..4a5f6e8
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/Text.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/TextInput.ast b/node_modules/reason-react-native/lib/bs/src/components/TextInput.ast
+new file mode 100644
+index 0000000..9c84729
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/TextInput.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/View.ast b/node_modules/reason-react-native/lib/bs/src/components/View.ast
+new file mode 100644
+index 0000000..57f6871
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/View.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/components/WebView.ast b/node_modules/reason-react-native/lib/bs/src/components/WebView.ast
+new file mode 100644
+index 0000000..c133c40
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/components/WebView.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.ast
+new file mode 100644
+index 0000000..a8f217f
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.d b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.d
+new file mode 100644
+index 0000000..d774fa3
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidElement.d
+@@ -0,0 +1 @@
++src/elements/DrawerLayoutAndroidElement-ReactNative.cmj : ReactNative.cmi src/elements/DrawerLayoutAndroidMethods-ReactNative.cmj src/elements/DrawerLayoutAndroidMethods-ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.ast
+new file mode 100644
+index 0000000..c0c3a5c
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.d
+new file mode 100644
+index 0000000..c10b07f
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/DrawerLayoutAndroidMethods.d
+@@ -0,0 +1 @@
++src/elements/DrawerLayoutAndroidMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.ast
+new file mode 100644
+index 0000000..77e8557
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.d b/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.d
+new file mode 100644
+index 0000000..57ecf0d
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/NativeElement.d
+@@ -0,0 +1 @@
++src/elements/NativeElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.ast
+new file mode 100644
+index 0000000..8b21f57
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.d
+new file mode 100644
+index 0000000..a4dd64c
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/NativeMethods.d
+@@ -0,0 +1 @@
++src/elements/NativeMethods-ReactNative.cmj : ReactNative.cmi src/types/NativeTypes-ReactNative.cmj src/types/NativeTypes-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.ast
+new file mode 100644
+index 0000000..5b67d31
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.d b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.d
+new file mode 100644
+index 0000000..40ce151
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewElement.d
+@@ -0,0 +1 @@
++src/elements/ScrollViewElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/ScrollViewMethods-ReactNative.cmj src/elements/ScrollViewMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.ast
+new file mode 100644
+index 0000000..dbfb998
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.d
+new file mode 100644
+index 0000000..2a9e390
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/ScrollViewMethods.d
+@@ -0,0 +1 @@
++src/elements/ScrollViewMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.ast
+new file mode 100644
+index 0000000..acad6ec
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.d b/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.d
+new file mode 100644
+index 0000000..25f8ab4
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/TextInputElement.d
+@@ -0,0 +1 @@
++src/elements/TextInputElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/TextInputMethods-ReactNative.cmj src/elements/TextInputMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.ast
+new file mode 100644
+index 0000000..3dbcab0
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.d
+new file mode 100644
+index 0000000..d74ead9
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/TextInputMethods.d
+@@ -0,0 +1 @@
++src/elements/TextInputMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.ast
+new file mode 100644
+index 0000000..3217d11
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.d b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.d
+new file mode 100644
+index 0000000..bfdc9b5
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityElement.d
+@@ -0,0 +1 @@
++src/elements/TouchableOpacityElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/TouchableOpacityMethods-ReactNative.cmj src/elements/TouchableOpacityMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.ast
+new file mode 100644
+index 0000000..da6a339
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.d
+new file mode 100644
+index 0000000..e8c4db6
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/TouchableOpacityMethods.d
+@@ -0,0 +1 @@
++src/elements/TouchableOpacityMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.ast
+new file mode 100644
+index 0000000..45cf972
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.d b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.d
+new file mode 100644
+index 0000000..5bf34e5
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidElement.d
+@@ -0,0 +1 @@
++src/elements/ViewPagerAndroidElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/ViewPagerAndroidMethods-ReactNative.cmj src/elements/ViewPagerAndroidMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.ast
+new file mode 100644
+index 0000000..008dcd7
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.d
+new file mode 100644
+index 0000000..745a360
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/ViewPagerAndroidMethods.d
+@@ -0,0 +1 @@
++src/elements/ViewPagerAndroidMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.ast
+new file mode 100644
+index 0000000..11fbbe4
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.d b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.d
+new file mode 100644
+index 0000000..f9576af
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListElement.d
+@@ -0,0 +1 @@
++src/elements/VirtualizedListElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/ScrollViewMethods-ReactNative.cmj src/elements/ScrollViewMethods-ReactNative.cmi src/elements/VirtualizedListMethods-ReactNative.cmj src/elements/VirtualizedListMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.ast
+new file mode 100644
+index 0000000..ec07cc5
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.d
+new file mode 100644
+index 0000000..947f976
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/VirtualizedListMethods.d
+@@ -0,0 +1 @@
++src/elements/VirtualizedListMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.ast b/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.ast
+new file mode 100644
+index 0000000..3d3f3da
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.d b/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.d
+new file mode 100644
+index 0000000..aa7c329
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/WebViewElement.d
+@@ -0,0 +1 @@
++src/elements/WebViewElement-ReactNative.cmj : ReactNative.cmi src/elements/NativeMethods-ReactNative.cmj src/elements/NativeMethods-ReactNative.cmi src/elements/WebViewMethods-ReactNative.cmj src/elements/WebViewMethods-ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.ast b/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.ast
+new file mode 100644
+index 0000000..15baa79
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.d b/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.d
+new file mode 100644
+index 0000000..5ee9abc
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/elements/WebViewMethods.d
+@@ -0,0 +1 @@
++src/elements/WebViewMethods-ReactNative.cmj : ReactNative.cmi
+diff --git a/node_modules/reason-react-native/lib/bs/src/private/SourceCode.ast b/node_modules/reason-react-native/lib/bs/src/private/SourceCode.ast
+new file mode 100644
+index 0000000..7343ab8
+Binary files /dev/null and b/node_modules/reason-react-native/lib/bs/src/private/SourceCode.ast differ
+diff --git a/node_modules/reason-react-native/lib/bs/src/private/SourceCode.d b/node_modules/reason-react-native/lib/bs/src/private/SourceCode.d
+new file mode 100644
+index 0000000..3783435
+--- /dev/null
++++ b/node_modules/reason-react-native/lib/bs/src/private/SourceCode.d
+@@ -0,0 +1 @@
++src/private/SourceCode-ReactNative.cmj : ReactNative.cmi

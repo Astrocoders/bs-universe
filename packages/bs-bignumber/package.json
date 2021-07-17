@@ -10,9 +10,9 @@
     "bignumber.js": "^8.0.2"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.0",
+    "@glennsl/bs-jest": "^0.7.0",
     "bs-platform": "^9.0.2",
-    "jest": "^22.1.4"
+    "jest": "^27.0.6"
   },
   "scripts": {
     "start": "yarn bs:watch",

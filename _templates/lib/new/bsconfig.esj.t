@@ -20,6 +20,5 @@ to: packages/<%= name %>/bsconfig.json
   "warnings": {
     "error" : "+101"
   },
-  "namespace": true,
-  "refmt": 3
+  "namespace": true
 }

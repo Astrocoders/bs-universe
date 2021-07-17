@@ -19,6 +19,5 @@ to: packages/<%= name %>/bsconfig.json
   "namespace": true,
   "bs-dependencies": [
     "reason-react"
-  ],
-  "refmt": 3
+  ]
 }

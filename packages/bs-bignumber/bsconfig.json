@@ -6,7 +6,6 @@
   "bs-dependencies": [],
   "bs-dev-dependencies": ["@glennsl/bs-jest"],
   "bsc-flags": ["-bs-super-errors"],
-  "refmt": 3,
   "namespace": true,
   "package-specs": {
     "module": "commonjs",

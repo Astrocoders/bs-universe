@@ -15,6 +15,6 @@ to: packages/<%= name %>/package.json
   "author": "Astrocoders <contact@astrocoders.com>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^5.0.6"
+    "bs-platform": "^9.0.2"
   }
 }

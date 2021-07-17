@@ -17,7 +17,7 @@ to: packages/<%= name %>/package.json
   "author": "Astrocoders <contact@astrocoders.com>",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^5.0.6",
+    "bs-platform": "^9.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "reason-react": ">=0.4.0"

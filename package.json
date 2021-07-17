@@ -11,7 +11,7 @@
     "react:new": "npx hygen react new"
   },
   "devDependencies": {
-    "hygen": "^4.0.9",
-    "lerna": "^3.16.4"
+    "hygen": "^6.1.0",
+    "lerna": "^4.0.0"
   }
 }
